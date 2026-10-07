@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chatwoot Course — ٧ أيام</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rakkas&family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;700;800&display=swap">
+<style>
+:root{--navy:#27374D;--mid:#526D82;--sky:#9DB2BF;--ice:#DDE6ED;--out:#DDE6ED;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--out:#18222E}}
+:root[data-theme="dark"]{--out:#18222E}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--out);font-family:'Tajawal',sans-serif;color:var(--ice)}
+.page{container-type:inline-size;width:min(100%,680px);margin:0 auto;padding:12px 10px 40px}
+.frame{background:var(--navy);border-radius:7cqw;padding:7cqw 6cqw;margin-bottom:5cqw;position:relative;overflow:hidden}
+.big{font-family:'Rakkas',serif;line-height:1.1}
+.top{display:flex;justify-content:space-between;font-size:3.2cqw;font-weight:700;color:var(--sky)}
+.card{background:var(--ice);color:var(--navy);border-radius:4cqw;position:relative;padding:4.5cqw 4.5cqw 4cqw}
+.card h3{font-weight:800;font-size:4.6cqw;line-height:1.3}
+.card p{font-size:3.7cqw;line-height:1.6;margin-top:1cqw;color:var(--mid);font-weight:500}
+.star{position:absolute;top:-3.4cqw;right:5cqw;color:var(--sky);font-size:5cqw;animation:tw 2.4s ease-in-out infinite}
+.note{background:var(--ice);background-image:linear-gradient(rgba(157,178,191,.55) 1px,transparent 1px),linear-gradient(90deg,rgba(157,178,191,.55) 1px,transparent 1px);background-size:4cqw 4cqw;color:var(--navy);font-family:'Aref Ruqaa',serif;font-weight:700;text-align:center;padding:6cqw 5cqw;position:relative;line-height:1.75;font-size:5.2cqw;box-shadow:0 .8cqw 2cqw rgba(0,0,0,.3)}
+.tape{position:absolute;width:15cqw;height:5.5cqw;background:var(--sky);opacity:.95;animation:wig 3s ease-in-out infinite}
+.t1{top:-2.6cqw;left:-4cqw;transform:rotate(-30deg)}.t2{bottom:-2.6cqw;right:-4cqw;transform:rotate(-30deg)}
+.row{display:flex;gap:3cqw;margin-top:9cqw}.row .card{flex:1;padding:4.5cqw 2.5cqw;text-align:center}.row .card p{font-size:3.2cqw}
+.cta{display:block;margin-top:6cqw;text-align:center;background:var(--sky);color:var(--navy);font-weight:800;font-size:5cqw;padding:4cqw;border-radius:4cqw;text-decoration:none;animation:pulse 2s ease-in-out infinite}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;margin:0 0 5cqw;background:var(--mid);border-radius:5cqw;padding:2.6cqw 3cqw 3.4cqw;box-shadow:0 1cqw 3cqw rgba(0,0,0,.25)}
+nav .l{display:flex;justify-content:space-between;gap:1cqw}
+nav a{flex:1;text-align:center;color:var(--ice);font-family:'Rakkas',serif;font-size:5.2cqw;text-decoration:none;padding:1.2cqw 0;border-radius:3cqw;transition:.25s}
+nav a.on{background:var(--ice);color:var(--navy);transform:translateY(-.6cqw) scale(1.08)}
+nav .bar{height:1cqw;background:var(--navy);border-radius:1cqw;margin-top:2cqw;overflow:hidden}
+nav .bar b{display:block;height:100%;width:calc(var(--p,0)*100%);background:var(--ice);border-radius:1cqw}
+.dh{display:flex;align-items:center;gap:4cqw;margin-bottom:6cqw}
+.dn{flex:none;width:19cqw;height:19cqw;border-radius:50%;background:var(--ice);color:var(--navy);display:grid;place-items:center;font-size:12cqw;font-family:'Rakkas',serif}
+.dh small{color:var(--sky);font-weight:700;font-size:3.8cqw}
+.dh h2{font-family:'Rakkas',serif;font-weight:400;font-size:8.4cqw;line-height:1.2;color:var(--ice)}
+.cards{display:flex;flex-direction:column;gap:6cqw;margin:8cqw 0 6cqw}
+.ex{background:var(--mid);border:.5cqw dashed var(--sky);border-radius:4cqw;padding:4.5cqw;font-size:4cqw;line-height:1.7;font-weight:700}
+.dg{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2.4cqw;margin:6cqw 0;padding:5cqw 3cqw;background:rgba(157,178,191,.14);border-radius:5cqw}
+.ch{background:var(--sky);color:var(--navy);font-weight:800;font-size:3.8cqw;padding:2.6cqw 3.4cqw;border-radius:3.5cqw;opacity:0}
+.dg i{font-style:normal;color:var(--sky);font-size:5cqw;opacity:0}
+.dg.in .ch{animation:pop .5s calc(var(--i)*.2s) both}
+.dg.in i{animation:nudge 1.3s calc(var(--i)*.2s + .4s) infinite;opacity:1}
+.pr{background:var(--ice);color:var(--navy);border-radius:4cqw;padding:4.2cqw 4.5cqw;font-weight:800;font-size:4cqw;line-height:1.6}
+.r{opacity:0;transform:translateY(5cqw) rotate(-1.2deg);transition:opacity .6s,transform .7s cubic-bezier(.2,.9,.3,1.25)}
+.r.in{opacity:1;transform:none}
+.hero svg{display:block;width:62cqw;margin:2cqw auto 0}
+.hero .brain{transform-origin:108px 78px;animation:pulse 2.2s ease-in-out infinite}
+.hero .bub{animation:bob 3s ease-in-out infinite}
+.hero .big{animation:bob 4s ease-in-out infinite}
+.tag{display:inline-block;background:var(--ice);color:var(--navy);font-weight:800;font-size:5.6cqw;line-height:1.3;padding:3.5cqw 5cqw;border-radius:4cqw;transform:rotate(-4deg);margin:-6cqw 0 6cqw;animation:wig 3.5s ease-in-out infinite}
+@keyframes tw{50%{transform:scale(1.35) rotate(25deg);opacity:.7}}
+@keyframes wig{50%{rotate:4deg}}
+@keyframes pulse{50%{transform:scale(1.04)}}
+@keyframes bob{50%{transform:translateY(-1.6cqw)}}
+@keyframes pop{0%{opacity:0;transform:scale(.5) rotate(-8deg)}70%{transform:scale(1.12)}100%{opacity:1;transform:none}}
+@keyframes nudge{50%{transform:translateX(-1.2cqw)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.r{opacity:1!important;transform:none!important}.ch,.dg i{opacity:1!important}}
+.card p b{color:var(--navy);font-weight:800}.card p{margin-top:1.4cqw}
+.sb{max-width:62cqw;margin:0 auto 7cqw;background:var(--ice);border-radius:5cqw;padding:3cqw;color:var(--navy);font-weight:800;font-size:4cqw;direction:ltr;text-align:left}
+.sb div{padding:2cqw 3cqw;border-radius:3cqw}
+.sb.in div{animation:hl 8s infinite;animation-delay:calc(var(--i)*1s)}
+@keyframes hl{0%,12%{background:var(--navy);color:var(--ice)}13%,100%{background:none}}
+.dg{display:block;position:relative;aspect-ratio:1000/580;margin:6cqw -2cqw;padding:0;overflow:hidden;border-radius:5cqw;background:repeating-radial-gradient(circle at 0% 100%,transparent 0 7cqw,rgba(221,230,237,.07) 7cqw 7.3cqw),linear-gradient(150deg,var(--mid),var(--navy))}
+.dg svg{position:absolute;inset:0;width:100%;height:100%}
+.dg path{fill:none;stroke:var(--ice);stroke-width:1.6;vector-effect:non-scaling-stroke;opacity:.75;stroke-dasharray:1;stroke-dashoffset:1}
+.dg.in path{animation:draw 2.4s ease forwards}
+.dot{position:absolute;width:2.6cqw;height:2.6cqw;margin:-1.3cqw 0 0 -1.3cqw;border-radius:50%;background:var(--ice);box-shadow:0 0 0 1.1cqw rgba(221,230,237,.2);opacity:0}
+.dg.in .dot{animation:pop .5s calc(var(--i)*.35s + .3s) both}
+.cap{position:absolute;opacity:0;color:var(--ice)}
+.cap{width:17cqw;text-align:center;font-weight:300;line-height:1.5;transform:translate(-50%,0);margin-top:2.8cqw}
+.cap b{display:block;font-weight:800;font-size:5.2cqw;line-height:1.1}
+.cap small{display:block;font-size:2.2cqw;opacity:.7;margin:.4cqw 0 1.2cqw}
+.dg.in .cap{animation:fin .7s calc(var(--i)*.35s + .5s) both}
+.sp{position:absolute;color:var(--ice);font-size:3.4cqw;animation:tw 3s ease-in-out infinite}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fin{from{opacity:0;translate:0 2cqw}to{opacity:1;translate:0 0}}
+@media (prefers-reduced-motion:reduce){.dg path{stroke-dashoffset:0}.dot,.cap,.num{opacity:1!important}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="frame hero" id="top">
+  <div class="top"><span>chatwoot course</span><span>💬 خطة ٧ أيام</span></div>
+  <div class="big" style="font-size:24cqw;margin-top:6cqw;color:var(--ice)">اتـــقـــن</div>
+  <div class="big" style="font-size:17cqw;color:var(--sky)">الأتمـــتـــة</div>
+  <svg viewBox="0 0 200 190" aria-hidden="true">
+    <path d="M30 185 C22 110 40 40 105 33 C165 28 186 88 164 130 L152 150 L128 152 L128 185 Z" fill="#DDE6ED"/>
+    <g class="brain"><ellipse cx="108" cy="78" rx="52" ry="40" fill="#9DB2BF"/>
+    <path d="M78 70 q14-14 26 0 t26 0 M72 90 q14 12 28 0 t28 0 M92 52 q10 8 20 0" stroke="#526D82" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+    <circle cx="58" cy="102" r="14" fill="none" stroke="#27374D" stroke-width="4"/><path d="M72 102 h14" stroke="#27374D" stroke-width="4"/>
+    <circle cx="86" cy="28" r="9" fill="#526D82"/><circle cx="130" cy="26" r="9" fill="#526D82"/><path d="M86 28 h44" stroke="#526D82" stroke-width="4"/>
+    <g class="bub"><rect x="150" y="6" width="38" height="26" rx="9" fill="#9DB2BF"/><path d="M162 32 l-4 10 l14-10z" fill="#9DB2BF"/>
+    <circle cx="162" cy="19" r="2.6" fill="#27374D"/><circle cx="170" cy="19" r="2.6" fill="#27374D"/><circle cx="178" cy="19" r="2.6" fill="#27374D"/></g>
+  </svg>
+  <div class="tag">٧ حصص<br>كل يوم درس</div>
+  <div class="note r"><span class="tape t1"></span><span class="tape t2"></span>الاحتراف مش موهبة، ده مهارة بتتبني بالتطبيق والتجربة والربط.</div>
+  <div class="dg r" id="hr" style="margin-top:9cqw"></div>
+  <a class="cta" href="#d0">ابدأ من اليوم الأول 👇</a>
+</header>
+
+<nav><div class="l" id="nv"></div><div class="bar"><b></b></div></nav>
+<main id="days"></main>
+
+<footer class="frame">
+  <div class="big" style="font-size:12cqw;color:var(--ice)">خلصت الكورس؟</div>
+  <div class="note r" style="margin-top:6cqw"><span class="tape t1"></span>ابني مشروع التخرج: شركتين، بوت واحد، وBackup يومي. وساعتها تبقى Pro بجد.</div>
+</footer>
+</div>
+
+<script>
+var SB=["💬 Conversations","👥 Contacts","📊 Reports","📣 Campaigns","📚 Help Center","⚙️ Settings","🔔 Notifications","🙂 Avatar"];
+var D=[
+["الـ Sidebar والواجهة كلها","الـ Sidebar هو خريطة Chatwoot، وكل حاجة هتستخدمها بتبدأ منه.",[
+"💬 Conversations|الشاشة الرئيسية للشغل|بتعرض كل المحادثات في 3 أعمدة: القايمة، الشات، وبيانات العميل|اختار تبويب Mine أو Unassigned أو All، وافتح محادثة وردّ",
+"@ Mentions وUnattended|فلترين جاهزين تحت Conversations|Mentions فيها المحادثات اللي زميل عملك @ فيها، وUnattended فيها اللي لسه مفيهاش رد|ابدأ بـ Unattended عشان مفيش عميل يتنسي",
+"📁 Folders وTeams وInboxes وLabels|اختصارات في الـ Sidebar|بتفلتر القايمة على فريق أو قناة أو تصنيف أو Folder محفوظ|اضغط على الاسم وهتشوف محادثاته بس",
+"👥 Contacts|قاعدة بيانات العملاء|بتحفظ الاسم والرقم والإيميل وكل محادثاته|ابحث بالاسم أو الرقم، أو اعمل فلتر واحفظه Segment",
+"📊 Reports|لوحة الأرقام|بتقيس سرعة الرد وعدد المحادثات ورضا العملاء|اختار الفترة وادخل على Overview ثم Agents",
+"📣 Campaigns|رسايل استباقية|Ongoing بتظهر لزوار الموقع، وOne-off رسالة لقايمة عملاء|اختار Inbox والرسالة والجمهور ثم Save",
+"📚 Help Center|موقع مقالات للمساعدة|بيقلل الأسئلة المتكررة لأن العميل بيلاقي الإجابة لوحده|اعمل Portal ثم Categories ثم Article",
+"⚙️ Settings|كل إعدادات الشركة (للـ Admin)|منه بتدير Agents وInboxes وAutomation وIntegrations|هنفصّله في الأيام 3 و4 و5 و6",
+"🔔 Notifications|جرس الإشعارات|بيبلّغك بالمنشن والإسناد والرسايل الجديدة|اضغط عليه، وظبط الأنواع من Profile Settings",
+"🙂 Avatar (حسابك)|قايمة الحساب أسفل الـ Sidebar|فيها حالتك Online/Busy/Offline وProfile Settings والاختصارات وAppearance وتبديل الـ Account|اضغط على صورتك وخلي حالتك Online قبل ما تبدأ"],
+"مثال: تفتح الصبح ثم تخلي حالتك Online ثم تدخل Unattended ثم ترد ثم تقفل المحادثة بـ Resolve.",
+["🙂 Online","📬 Unattended","✍️ رد","✅ Resolve"],"افتح كل عنصر في الـ Sidebar واكتب سطر عن وظيفته."],
+["المحادثة من جوه","الشات هو قلب Chatwoot، فاتقنه قبل أي حاجة تانية.",[
+"🔖 Status|حالة المحادثة|Open شغالة، Pending مستنية، Snoozed مؤجلة، Resolved اتقفلت|غيّرها من زرار Resolve فوق الشات",
+"🔎 Filters وFolders|فلتر متقدم على القايمة|تجمع شروط زي Inbox = واتساب وLabel = VIP|أيقونة الفلتر ثم Add filter ثم Apply، وSave تحفظه Folder",
+"✍️ Reply وPrivate Note|تبويبين في خانة الكتابة|Reply بيوصل للعميل، وPrivate Note للفريق بس|بدّل التبويب قبل الإرسال، والـ Note لونها أصفر",
+"🧰 أدوات الكتابة|أزرار تحت الخانة|Emoji وAttachments وVoice وSignature وCanned Responses|اكتب / للردود الجاهزة و@ لمنشن زميل",
+"🧑 Contact Panel|عمود بيانات العميل|فيه Assignee وTeam وPriority وLabels وParticipants وContact Attributes والمحادثات السابقة|حدد الموظف والفريق والـ Label من هنا",
+"🪄 Macros|إجراءات كتير بضغطة|بتنفذ أكتر من خطوة مرة واحدة|اختار Macro من الـ Panel ثم Execute",
+"⏰ Snooze وMute|تأجيل وكتم|Snooze يخفي المحادثة لوقت محدد، وMute يوقف إشعاراتها|من أيقونة ⋯ جنب Resolve",
+"📧 Transcript وMerge|نسخة الشات ودمج العملاء|Transcript يبعت الشات إيميل، وMerge يدمج عميلين هما نفس الشخص|من ⋯ للـ Transcript ومن صفحة Contact للـ Merge"],
+"مثال: عميل VIP بيسأل عن فاتورة ثم Private Note للمحاسب بـ @ ثم Assign لفريق Billing ثم Snooze لبكرة.",
+["📩 رسالة","🏷️ Label","📝 Note + @","👥 Assign","⏰ Snooze"],"جرّب Note وMention وSnooze وFolder محفوظ على محادثة تجريبية."],
+["الـ Inboxes من جوه","كل Inbox ليه تبويبات، وكل تبويب بيتحكم في حاجة مختلفة.",[
+"📥 Settings ثم Inboxes|قايمة قنواتك|بتضيف وتعدّل وتمسح قنوات التواصل|Add Inbox ثم اختار القناة",
+"⚙️ تبويب Settings|الإعدادات العامة للـ Inbox|الاسم وGreeting وAuto-assignment وCSAT والرد بعد الـ Resolve|فعّل اللي محتاجه وSave",
+"👥 Collaborators|مين يشوف الـ Inbox|الموظف مبيشوفش غير الـ Inboxes المتضاف عليها|ضيف أو شيل الموظفين",
+"🕘 Business Hours|ساعات الدوام|بتبعت رسالة خارج الدوام وبتحسب الـ SLA صح|فعّلها وحدد الأيام والتوقيت والرسالة",
+"📝 Pre Chat Form|نموذج قبل الشات (Website)|بيجمع الاسم والإيميل قبل ما يبدأ العميل|فعّله وحدد الحقول المطلوبة",
+"🎨 Widget Builder|تصميم الودجت|اللون والموضع ورسالة الترحيب|عدّل وشوف المعاينة",
+"🔧 Configuration|بيانات الربط|فيه الـ Script وWebhook URL وTokens حسب القناة|انسخ منه وحطه في Meta أو موقعك",
+"📲 قنوات الربط|Website وWhatsApp وFacebook وInstagram وTelegram وEmail وAPI|لكل قناة خطوات ربط مختلفة|الخطوات كاملة في نوشن حصة ٢"],
+"مثال: Inbox واتساب المبيعات: Auto-assignment شغال، Business Hours من 9 لـ 5، وCSAT مفعّل.",
+["🔗 Add Inbox","⚙️ Settings","👥 Collaborators","🕘 Hours","✅ تجربة"],"اعمل Inbox Website كامل بكل التبويبات وجرّب رسالة خارج الدوام."],
+["الناس والتنظيم","هنا بتبني هيكل شركتك: مين يعمل إيه وبيشوف إيه.",[
+"🧑‍💻 Agents|موظفينك|بتضيف وتحدد الدور (Administrator أو Agent) وتحذف|Settings ثم Agents ثم Add Agent",
+"🛡️ Custom Roles|أدوار مخصصة (Enterprise)|بتتحكم في صلاحيات دقيقة زي Supervisor|Settings ثم Custom Roles ثم Add",
+"👥 Teams|مجموعات موظفين|بتسند لفريق وتعمل عليه Automation وتقارير|اعمل Team وضيف أعضاءه",
+"🏷️ Labels|تصنيفات|بتجمّع المحادثات بموضوع أو حالة وبتظهر في الـ Sidebar|اعمل Label بلون وفعّل Show in sidebar",
+"🧩 Custom Attributes|حقول إضافية|على Contact أو Conversation: Text وNumber وDate وList وCheckbox وLink|Settings ثم Custom Attributes ثم Add",
+"📇 Contacts: Segments وImport|إدارة العملاء|فلتر محفوظ واستيراد CSV وNotes وMerge|من Contacts استخدم الفلتر وImport",
+"🧾 Audit Logs|سجل العمليات (Enterprise)|بيسجل مين غيّر إيه ومتى|Settings ثم Audit Logs",
+"🏢 Account Settings|إعدادات الشركة|الاسم واللغة وAuto-resolve وتفعيل الميزات|Settings ثم Account Settings"],
+"مثال: Sales Team فيها 3 Agents، وSupervisor بـ Custom Role، والـ Label «VIP» بيتحط أوتوماتيك.",
+["🧑‍💻 Agent","👥 Team","🏷️ Label","🧩 Attribute","📊 تقرير"],"ابني هيكل شركتك: Teams وAgents وLabels و3 Custom Attributes."],
+["الأتمتة والإنتاجية والتقارير","اللي بيتكرر، خلّي Chatwoot يعمله، وقيس النتيجة بالأرقام.",[
+"🤖 Automation Rules|قواعد بتتنفذ لوحدها|Event + Conditions + Actions|Settings ثم Automation ثم Add Rule",
+"⚡ Macros|سلسلة إجراءات بضغطة|الموظف بيشغّلها يدوي|Settings ثم Macros ثم Add",
+"💬 Canned Responses|ردود جاهزة|بتوفر وقت الكتابة وبتوحّد الأسلوب|اعمل Short code ثم اكتب / في الشات",
+"📣 Campaigns|رسايل استباقية|Ongoing لزوار الموقع وOne-off لقايمة|اختار Inbox والجمهور والتوقيت",
+"📊 Reports|لوحة الأداء|Overview وConversations وAgents وLabels وInboxes وTeams وCSAT وSLA|اختار الفترة وصدّر CSV",
+"⏱️ SLA (Enterprise)|اتفاقية مستوى الخدمة|وقت أقصى لأول رد وللرد التالي وللحل|Settings ثم SLA ثم Add Policy",
+"⭐ CSAT|استبيان رضا|بيتبعت بعد Resolve|فعّله من إعدادات الـ Inbox وشوف النتايج في Reports",
+"📚 Help Center|بوابة مقالات|Portals وCategories وArticles ودومين خاص|Help Center ثم New Portal"],
+"مثال: Rule: لو الرسالة فيها «سعر» ثم Label «استفسار-سعر» ثم Assign لـ Sales ثم Priority عالية.",
+["📩 Event","🔎 Conditions","🏷️ Label","👥 Assign","⭐ CSAT"],"اعمل 3 Rules وMacro و5 Canned وCampaign على الموقع."],
+["الـ Integrations والـ API","هنا Chatwoot بيتكلم مع باقي أنظمتك.",[
+"🧩 Integrations|تكاملات جاهزة|Slack وDialogflow وLinear وShopify وGoogle Translate وOpenAI حسب الإصدار|Settings ثم Integrations ثم Configure",
+"🔔 Webhooks|إشعار لنظام خارجي|بيبعت الأحداث زي message_created لـ URL|Integrations ثم Webhooks ثم Add وحدد الأحداث",
+"🖼️ Dashboard Apps|صفحة خارجية جوه Chatwoot|بتعرض بيانات من نظامك جنب المحادثة|Integrations ثم Dashboard Apps",
+"🤖 Agent Bots|موظف آلي|بيشتغل على الـ Pending وبيسلّم للبشر|Settings ثم Bots ثم Add واربطه بـ Inbox",
+"🔑 Access Token|مفتاح الـ API|بيمثل صلاحيات المستخدم|Profile Settings ثم Access Token",
+"📡 Application API|التحكم في الـ Account|رسايل ومحادثات وعملاء وLabels|Header اسمه api_access_token",
+"🌐 Client API وWidget SDK|للواجهات الخاصة|الـ SDK فيه setUser وsetLabel وtoggle|استخدم window.$chatwoot من الـ Script",
+"🛠️ Platform API|إدارة Accounts وUsers|بتعمل شركات تلقائي|Platform App من Super Admin"],
+"مثال: Webhook على conversation_created بيبعت لـ n8n اللي بيسجّل العميل في Google Sheets.",
+["💬 حدث","🔔 Webhook","⚙️ n8n","📤 API","✅ تنفيذ"],"اعمل Webhook وAgent Bot وجرّب طلب API من Postman."],
+["أكتر من شركة + n8n + الإنتاج","آخر يوم: كل اللي اتعلمته بيتجمع في نظام واحد.",[
+"🔀 Account Switcher|تبديل الشركة|بيظهر لو عندك أكتر من Account|من أعلى الـ Sidebar",
+"🛠️ Super Admin|مدير السيرفر|بيعمل Accounts وUsers ويضبط الـ Installation|المسار super_admin",
+"🏢 Account لكل شركة|Tenant مستقل|داتا وقنوات وموظفين منفصلين|Super Admin ثم Accounts ثم New",
+"⚙️ n8n Webhook Node|بيستقبل أحداث Chatwoot|Method POST والـ Production URL|حط الرابط في Webhooks",
+"📤 n8n HTTP Request|بيرد بالـ API|POST على conversations/ID/messages|Header Auth باسم api_access_token",
+"🧠 AI Agent|ذكاء اصطناعي بذاكرة|Session ID = conversation.id|اربطه بـ Knowledge Base",
+"🙋 Handoff|تسليم لموظف|Note ثم Label ثم Assign ثم status = open|بعد فلترة message_type = incoming",
+"🛡️ Production|تشغيل آمن|Backup وHTTPS وMonitoring وتحديث بحذر|pg_dump يومي وdocker compose pull"],
+"مثال: Workflow واحد يقرا account.id ويسحب Token الشركة من جدول ويرد بالـ AI من Knowledge Base بتاعتها.",
+["🌐 Webhook","🗂️ جدول الشركات","🤖 AI","🙋 Handoff","💾 Backup"],"مشروع التخرج: شركتين وبوت واحد وBackup يومي."]];
+function kash(w){if(!/[\u0600-\u06FF]/.test(w)||/[A-Za-z0-9]/.test(w)||w.length<3)return w;var nc="اأإآدذرزوؤةءى",ok=function(i){return nc.indexOf(w[i])<0&&!/[\u064B-\u065F]/.test(w[i])&&!/[\u064B-\u065F]/.test(w[i+1]||"")};for(var i=Math.ceil(w.length/2)-1;i>=1;i--)if(ok(i))return w.slice(0,i+1)+"ـــ"+w.slice(i+1);return w}
+function lines(t){if(t.indexOf("|")>=0)return t.split("|");var w=t.replace(/[\u{1F000}-\u{1FFFF}\u2600-\u27BF\uFE0F\u200D]/gu,"").split(/\s+/).filter(function(x){return /[\w\u0600-\u06FF]/.test(x)});return w.length>3?[w[0],w[1],w.slice(2).join(" ")]:w}
+function arc(a){var N=a.length,o='<svg viewBox="0 0 1000 580" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M30 330 Q500 120 970 330"/></svg><b class="sp" style="top:9%;right:6%">✦</b><b class="sp" style="top:30%;left:3%;animation-delay:1s">✦</b>';
+a.forEach(function(s,k){var t=1-(.07+.86*k/(N-1)),u=1-t,x=u*u*30+2*u*t*500+t*t*970,y=u*u*330+2*u*t*120+t*t*330,L=lines(s),m=Math.max.apply(0,L.map(function(z){return z.length})),st='left:'+x/10+'%;top:'+y/5.8+'%;--i:'+k;
+o+='<i class="dot" style="'+st+'"></i><div class="cap" style="'+st+';font-size:'+(m>9?2.3:2.9)+'cqw"><b>0'+(k+1)+'</b><small>مرحلة</small>'+L.map(kash).join('<br>')+'</div>'});return o}
+var A="١٢٣٤٥٦٧",L=["إيه هو؟","بيعمل إيه؟","إزاي تستخدمه؟"],nv="",h="";
+D.forEach(function(d,i){
+ nv+='<a href="#d'+i+'">'+A[i]+'</a>';
+ h+='<section class="frame" id="d'+i+'"><div class="dh r"><span class="dn">'+A[i]+'</span><div><small>اليوم '+A[i]+'</small><h2>'+d[0]+'</h2></div></div><div class="note r"><span class="tape t1"></span><span class="tape t2"></span>'+d[1]+'</div>'+
+ (i?'':'<div class="sb r" style="margin-top:8cqw">'+SB.map(function(x,k){return '<div style="--i:'+k+'">'+x+'</div>'}).join('')+'</div>')+
+ '<div class="cards">'+d[2].map(function(c){var f=c.split('|');return '<div class="card r"><span class="star">★</span><h3>'+f[0]+'</h3>'+[1,2,3].map(function(k){return '<p><b>'+L[k-1]+'</b> '+f[k]+'</p>'}).join('')+'</div>'}).join('')+'</div>'+
+ '<div class="ex r">💡 '+d[3]+'</div><div class="dg r">'+arc(d[4])+'</div><div class="pr r">🎯 تمرين: '+d[5]+'</div></section>'});
+document.getElementById('nv').innerHTML=nv;document.getElementById('days').innerHTML=h;document.getElementById('hr').innerHTML=arc(['ركّب|التنصيب|والـ Inboxes','نظّم|الأدوار|والشركات','أتمت|API و n8n|والـ AI']);
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1});
+document.querySelectorAll('.r').forEach(function(n){io.observe(n)});
+var links=document.querySelectorAll('nav a'),bar=document.querySelector('nav');
+var so=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){var i=+x.target.id.slice(1);links.forEach(function(l,k){l.classList.toggle('on',k===i)})}})},{rootMargin:'-40% 0px -50% 0px'});
+document.querySelectorAll('main section').forEach(function(s){so.observe(s)});
+addEventListener('scroll',function(){var m=document.documentElement,p=m.scrollTop/(m.scrollHeight-m.clientHeight);bar.style.setProperty('--p',Math.min(1,Math.max(0,p)))},{passive:true});
+</script>
+</body>
+</html>
