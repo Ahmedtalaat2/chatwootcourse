@@ -3,214 +3,920 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Chatwoot + Automation Course — 7 أيام من الأساسيات إلى بناء نظام Customer Service Automation عملي.">
 <title>Chatwoot Course — ٧ أيام</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rakkas&family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;700;800&display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rakkas&family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;700;800&display=swap" rel="stylesheet">
+
 <style>
-:root{--navy:#27374D;--mid:#526D82;--sky:#9DB2BF;--ice:#DDE6ED;--out:#DDE6ED;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--out:#18222E}}
-:root[data-theme="dark"]{--out:#18222E}
-html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
-*{box-sizing:border-box;margin:0}
-body{background:var(--out);font-family:'Tajawal',sans-serif;color:var(--ice)}
-.page{container-type:inline-size;width:min(100%,680px);margin:0 auto;padding:12px 10px 40px}
-.frame{background:var(--navy);border-radius:7cqw;padding:7cqw 6cqw;margin-bottom:5cqw;position:relative;overflow:hidden}
-.big{font-family:'Rakkas',serif;line-height:1.1}
-.top{display:flex;justify-content:space-between;font-size:3.2cqw;font-weight:700;color:var(--sky)}
-.card{background:var(--ice);color:var(--navy);border-radius:4cqw;position:relative;padding:4.5cqw 4.5cqw 4cqw}
-.card h3{font-weight:800;font-size:4.6cqw;line-height:1.3}
-.card p{font-size:3.7cqw;line-height:1.6;margin-top:1cqw;color:var(--mid);font-weight:500}
-.star{position:absolute;top:-3.4cqw;right:5cqw;color:var(--sky);font-size:5cqw;animation:tw 2.4s ease-in-out infinite}
-.note{background:var(--ice);background-image:linear-gradient(rgba(157,178,191,.55) 1px,transparent 1px),linear-gradient(90deg,rgba(157,178,191,.55) 1px,transparent 1px);background-size:4cqw 4cqw;color:var(--navy);font-family:'Aref Ruqaa',serif;font-weight:700;text-align:center;padding:6cqw 5cqw;position:relative;line-height:1.75;font-size:5.2cqw;box-shadow:0 .8cqw 2cqw rgba(0,0,0,.3)}
-.tape{position:absolute;width:15cqw;height:5.5cqw;background:var(--sky);opacity:.95;animation:wig 3s ease-in-out infinite}
-.t1{top:-2.6cqw;left:-4cqw;transform:rotate(-30deg)}.t2{bottom:-2.6cqw;right:-4cqw;transform:rotate(-30deg)}
-.row{display:flex;gap:3cqw;margin-top:9cqw}.row .card{flex:1;padding:4.5cqw 2.5cqw;text-align:center}.row .card p{font-size:3.2cqw}
-.cta{display:block;margin-top:6cqw;text-align:center;background:var(--sky);color:var(--navy);font-weight:800;font-size:5cqw;padding:4cqw;border-radius:4cqw;text-decoration:none;animation:pulse 2s ease-in-out infinite}
-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;margin:0 0 5cqw;background:var(--mid);border-radius:5cqw;padding:2.6cqw 3cqw 3.4cqw;box-shadow:0 1cqw 3cqw rgba(0,0,0,.25)}
-nav .l{display:flex;justify-content:space-between;gap:1cqw}
-nav a{flex:1;text-align:center;color:var(--ice);font-family:'Rakkas',serif;font-size:5.2cqw;text-decoration:none;padding:1.2cqw 0;border-radius:3cqw;transition:.25s}
-nav a.on{background:var(--ice);color:var(--navy);transform:translateY(-.6cqw) scale(1.08)}
-nav .bar{height:1cqw;background:var(--navy);border-radius:1cqw;margin-top:2cqw;overflow:hidden}
-nav .bar b{display:block;height:100%;width:calc(var(--p,0)*100%);background:var(--ice);border-radius:1cqw}
-.dh{display:flex;align-items:center;gap:4cqw;margin-bottom:6cqw}
-.dn{flex:none;width:19cqw;height:19cqw;border-radius:50%;background:var(--ice);color:var(--navy);display:grid;place-items:center;font-size:12cqw;font-family:'Rakkas',serif}
-.dh small{color:var(--sky);font-weight:700;font-size:3.8cqw}
-.dh h2{font-family:'Rakkas',serif;font-weight:400;font-size:8.4cqw;line-height:1.2;color:var(--ice)}
-.cards{display:flex;flex-direction:column;gap:6cqw;margin:8cqw 0 6cqw}
-.ex{background:var(--mid);border:.5cqw dashed var(--sky);border-radius:4cqw;padding:4.5cqw;font-size:4cqw;line-height:1.7;font-weight:700}
-.dg{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2.4cqw;margin:6cqw 0;padding:5cqw 3cqw;background:rgba(157,178,191,.14);border-radius:5cqw}
-.ch{background:var(--sky);color:var(--navy);font-weight:800;font-size:3.8cqw;padding:2.6cqw 3.4cqw;border-radius:3.5cqw;opacity:0}
-.dg i{font-style:normal;color:var(--sky);font-size:5cqw;opacity:0}
-.dg.in .ch{animation:pop .5s calc(var(--i)*.2s) both}
-.dg.in i{animation:nudge 1.3s calc(var(--i)*.2s + .4s) infinite;opacity:1}
-.pr{background:var(--ice);color:var(--navy);border-radius:4cqw;padding:4.2cqw 4.5cqw;font-weight:800;font-size:4cqw;line-height:1.6}
-.r{opacity:0;transform:translateY(5cqw) rotate(-1.2deg);transition:opacity .6s,transform .7s cubic-bezier(.2,.9,.3,1.25)}
-.r.in{opacity:1;transform:none}
-.hero svg{display:block;width:62cqw;margin:2cqw auto 0}
-.hero .brain{transform-origin:108px 78px;animation:pulse 2.2s ease-in-out infinite}
-.hero .bub{animation:bob 3s ease-in-out infinite}
-.hero .big{animation:bob 4s ease-in-out infinite}
-.tag{display:inline-block;background:var(--ice);color:var(--navy);font-weight:800;font-size:5.6cqw;line-height:1.3;padding:3.5cqw 5cqw;border-radius:4cqw;transform:rotate(-4deg);margin:-6cqw 0 6cqw;animation:wig 3.5s ease-in-out infinite}
+:root{
+  --navy:#172235;--navy2:#22304a;--mid:#4f657c;--sky:#9db2bf;--ice:#f2f5f7;--paper:#ffffff;
+  --ink:#182233;--muted:#64748b;--line:#dbe3ea;--accent:#8ea9ba;--accent2:#d6e2e9;
+  --ok:#2d8a67;--warn:#c78c32;--danger:#b85b5b;--shadow:0 18px 50px rgba(16,30,48,.12);
+  --radius:22px;--code:#0f1725;box-sizing:border-box;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:Tahoma,Arial,"Segoe UI",sans-serif;background:linear-gradient(180deg,#edf2f5 0%,#dfe8ee 100%);color:var(--ink);line-height:1.8}
+button,input,select{font:inherit}
+a{color:inherit}
+.container{width:min(1180px,calc(100% - 28px));margin:0 auto}
+.hero{margin:18px auto 14px;background:linear-gradient(145deg,var(--navy),var(--navy2));color:#fff;border-radius:34px;box-shadow:var(--shadow);overflow:hidden;position:relative}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(2px);opacity:.14;pointer-events:none}
+.hero:before{width:360px;height:360px;background:var(--sky);top:-190px;left:-80px}.hero:after{width:270px;height:270px;background:#fff;bottom:-170px;right:-70px}
+.hero-inner{padding:42px 38px 34px;position:relative;z-index:1}
+.eyebrow{display:flex;justify-content:space-between;gap:12px;align-items:center;color:var(--accent2);font-weight:800;font-size:14px;letter-spacing:.2px}
+.hero-title{font-size:clamp(38px,7vw,78px);font-weight:900;line-height:1.05;margin-top:18px;max-width:850px}
+.hero-title span{color:var(--sky)}
+.hero-sub{font-size:clamp(16px,2vw,21px);color:#d9e3ea;margin-top:18px;max-width:780px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{border:0;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 16px;border-radius:14px;font-weight:900;transition:.2s transform,.2s opacity,.2s background}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--ice);color:var(--navy)}.btn.ghost{background:rgba(255,255,255,.10);color:#fff;border:1px solid rgba(255,255,255,.14)}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:26px}
+.stat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.11);border-radius:18px;padding:14px}
+.stat b{display:block;font-size:23px}.stat span{font-size:12px;color:#c7d5df}
+.notice{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 10px 30px rgba(20,40,60,.06);padding:16px 18px;margin:14px auto;display:flex;gap:13px;align-items:flex-start}
+.notice .icon{font-size:24px}.notice b{display:block;margin-bottom:4px}
+.toolbar{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:center;margin:15px auto}
+.search{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:0 12px}.search input{border:0;outline:0;background:none;width:100%;padding:12px;font-size:14px}
+.progress{background:#fff;border:1px solid var(--line);padding:8px 12px;border-radius:16px;min-width:200px}.progress-top{display:flex;justify-content:space-between;font-size:12px;font-weight:800}.progress-bar{height:8px;background:#e7edf1;border-radius:99px;overflow:hidden;margin-top:6px}.progress-bar i{display:block;width:0;height:100%;background:var(--navy);border-radius:99px;transition:.3s width}
+main{padding-bottom:40px}
+.day{background:var(--paper);border:1px solid var(--line);border-radius:30px;box-shadow:var(--shadow);margin:18px auto;overflow:hidden;scroll-margin-top:88px}
+.day-head{padding:28px;background:linear-gradient(145deg,#ffffff,#eef3f6);border-bottom:1px solid var(--line);position:relative}
+.day-badge{display:inline-flex;align-items:center;justify-content:center;width:54px;height:54px;border-radius:50%;background:var(--navy);color:#fff;font-size:28px;font-weight:900;box-shadow:0 8px 20px rgba(23,34,53,.18)}
+.day-kicker{color:var(--mid);font-size:13px;font-weight:900;margin-top:9px}.day-title{font-size:clamp(24px,3.2vw,38px);font-weight:900;line-height:1.25;margin-top:3px}.day-intro{margin-top:8px;color:#46566a;max-width:900px}.outcomes{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.pill{background:#e7eef3;color:var(--navy);border-radius:999px;padding:6px 10px;font-size:12px;font-weight:900}
+.section{padding:24px 28px;border-bottom:1px solid var(--line)}.section:last-child{border-bottom:0}
+.section h3{font-size:22px;line-height:1.3;margin-bottom:10px}.section h4{font-size:18px;margin-top:17px;margin-bottom:7px}.lead{color:#435269}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:12px}.node{padding:9px 13px;border-radius:14px;background:var(--navy);color:#fff;font-weight:900;font-size:13px}.arrow{color:var(--mid);font-size:20px;font-weight:900}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:16px}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{border:1px solid var(--line);background:#fbfcfd;border-radius:20px;padding:16px}.card h5{font-size:16px;margin-bottom:6px}.card p{color:#526273;font-size:14px}.card .mini{margin-top:9px;font-size:12px;color:var(--mid);font-weight:800}
+.visual{border:1px dashed #aabac6;border-radius:20px;overflow:hidden;background:#f6f9fb;margin-top:16px}.visual-head{display:flex;justify-content:space-between;align-items:center;padding:10px 13px;background:#e9f0f4;border-bottom:1px solid #d8e2e8;font-size:12px;font-weight:900;color:var(--mid)}
+.mock-ui{display:grid;grid-template-columns:160px 1fr 210px;min-height:230px}.mock-side{background:#1c2940;color:#dce6ed;padding:14px}.mock-side b{display:block;color:#fff;margin-bottom:12px}.mock-item{padding:7px 8px;border-radius:8px;font-size:12px;margin:3px 0}.mock-item.on{background:#dce6ed;color:#1c2940;font-weight:900}.mock-main{background:#fff;padding:14px}.mock-top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e7ecef;padding-bottom:8px}.mock-msg{background:#eef3f6;border-radius:14px;padding:10px;margin-top:12px;width:78%;font-size:12px}.mock-msg.me{margin-right:auto;background:#dde7ee}.mock-right{background:#f7fafb;border-right:1px solid #e5ebef;padding:14px}.mock-chip{font-size:11px;background:#e7eef3;padding:6px 8px;border-radius:10px;margin:4px 0;display:inline-block}.visual-caption{padding:10px 14px;font-size:12px;color:#5c6c7c;background:#fff}
+.diagram{padding:20px}.diagram-row{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;align-items:center}.diagram-box{background:#fff;border:1px solid var(--line);border-radius:16px;padding:13px 8px;text-align:center;font-weight:900;font-size:12px;min-height:72px;display:flex;align-items:center;justify-content:center}.diagram-arrow{font-size:20px;color:var(--mid);text-align:center}
+.code{direction:ltr;text-align:left;background:var(--code);color:#d8e4ef;border-radius:16px;padding:15px;overflow:auto;font-family:Consolas,"Courier New",monospace;font-size:12px;line-height:1.65;margin-top:11px}.code .c{color:#85a7bd}.code .k{color:#d9b779}.code .s{color:#b6d7c1}
+.steps{counter-reset:step;display:grid;gap:10px;margin-top:14px}.step{position:relative;padding:13px 48px 13px 13px;background:#f7fafc;border:1px solid var(--line);border-radius:16px}.step:before{counter-increment:step;content:counter(step);position:absolute;right:13px;top:12px;width:26px;height:26px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:900;font-size:12px}.step b{display:block}.step span{display:block;color:#5d6b7a;font-size:13px;margin-top:3px}
+.callout{padding:15px;border-radius:18px;margin-top:14px;border:1px solid transparent}.callout.info{background:#edf4f8;border-color:#cbdce6}.callout.tip{background:#eff7f2;border-color:#c8e3d5}.callout.warn{background:#fff7ea;border-color:#ecd3a7}.callout.danger{background:#fff0f0;border-color:#e5b9b9}.callout b{display:block;margin-bottom:4px}.callout p{font-size:13px;color:#556579}
+.accordion{border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-top:12px}.acc{border-bottom:1px solid var(--line)}.acc:last-child{border-bottom:0}.acc button{width:100%;background:#fff;border:0;padding:14px 16px;text-align:right;cursor:pointer;font-weight:900;display:flex;justify-content:space-between;gap:10px}.acc .body{display:none;padding:0 16px 16px;color:#59687a;font-size:13px}.acc.open .body{display:block}
+.lab{background:linear-gradient(145deg,#edf6f2,#f7fbf8);border:1px solid #c8dfd4;border-radius:22px;padding:18px;margin-top:14px}.lab-head{display:flex;justify-content:space-between;gap:10px;align-items:center}.lab h4{margin:0}.lab .task{margin-top:8px;color:#405366}.checklist{display:grid;gap:8px;margin-top:12px}.check{display:flex;gap:9px;align-items:flex-start;font-size:13px}.check input{width:18px;height:18px;margin-top:3px}.result{margin-top:11px;font-size:12px;font-weight:900;color:#396c56}
+.quiz{margin-top:16px;border:1px solid var(--line);border-radius:20px;padding:17px;background:#fff}.q{padding:12px 0;border-bottom:1px solid #edf1f3}.q:last-child{border-bottom:0}.q p{font-weight:900}.opts{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}.opts button{border:1px solid var(--line);background:#f8fafb;border-radius:12px;padding:7px 10px;cursor:pointer;font-size:12px;font-weight:800}.opts button.good{background:#e9f6ee;border-color:#b9ddc8}.opts button.bad{background:#fff0f0;border-color:#e5bcbc}.quiz-score{margin-top:11px;padding:10px 12px;border-radius:12px;background:#eef4f7;font-size:13px;font-weight:900}
+footer{margin:18px auto 35px;background:var(--navy);color:#fff;border-radius:28px;padding:25px;box-shadow:var(--shadow)}footer h2{font-size:26px}footer p{color:#d7e2e9;margin-top:6px}.sources{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}.sources a{background:rgba(255,255,255,.09);padding:7px 10px;border-radius:10px;text-decoration:none;font-size:12px}
+.hidden{display:none!important}.empty{padding:25px;text-align:center;color:#68798b}
+@media(max-width:850px){.hero-stats{grid-template-columns:repeat(2,1fr)}.grid,.grid.three{grid-template-columns:1fr}.toolbar{grid-template-columns:1fr}.mock-ui{grid-template-columns:95px 1fr}.mock-right{display:none}.diagram-row{grid-template-columns:1fr}.diagram-arrow{transform:rotate(90deg)}}
+@media(max-width:560px){.hero-inner{padding:28px 20px 24px}.section,.day-head{padding:19px}.container{width:min(100% - 18px,1180px)}.hero{border-radius:24px}.day{border-radius:22px}.eyebrow{font-size:11px}.hero-sub{font-size:15px}.stat b{font-size:19px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* ===== Original Chatwoot Course Visual Theme ===== */
+:root{
+  --navy:#27374D;--navy2:#27374D;--mid:#526D82;--sky:#9DB2BF;--ice:#DDE6ED;--paper:#DDE6ED;
+  --ink:#27374D;--muted:#526D82;--line:rgba(157,178,191,.35);--accent:#9DB2BF;--accent2:#DDE6ED;
+  --ok:#526D82;--warn:#9DB2BF;--danger:#526D82;--shadow:0 .8cqw 2cqw rgba(0,0,0,.25);
+  --radius:4cqw;--code:#18222E;
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+body{background:var(--out,#DDE6ED);font-family:'Tajawal',sans-serif;color:var(--ice);line-height:1.7}
+.container{container-type:inline-size;width:min(100%,680px);margin:0 auto;padding-left:10px;padding-right:10px}
+.hero{margin:12px auto 5cqw;background:var(--navy);color:var(--ice);border-radius:7cqw;box-shadow:none;overflow:hidden;position:relative}
+.hero:before,.hero:after{display:none}
+.hero-inner{padding:7cqw 6cqw 6cqw;position:relative;z-index:1}
+.eyebrow{font-size:3.2cqw;color:var(--sky);font-family:'Tajawal',sans-serif}
+.hero-title{font-family:'Rakkas',serif;font-size:24cqw;line-height:1.1;font-weight:400;margin-top:6cqw;color:var(--ice);max-width:none}
+.hero-title span{color:var(--sky)}
+.hero-sub{font-family:'Aref Ruqaa',serif;font-size:5.2cqw;line-height:1.75;color:var(--navy);background:var(--ice);padding:6cqw 5cqw;margin-top:6cqw;border-radius:4cqw;box-shadow:0 .8cqw 2cqw rgba(0,0,0,.3);position:relative}
+.hero-sub:before{content:'الاحتراف مش موهبة، ده مهارة بتتبني بالتطبيق والتجربة والربط.';display:block;font-size:5.2cqw}
+.hero-sub{font-size:0;color:transparent}
+.hero-actions{display:flex;flex-wrap:wrap;gap:2cqw;margin-top:6cqw}
+.btn{padding:3.5cqw 4cqw;border-radius:4cqw;font-family:'Tajawal',sans-serif;font-weight:800;font-size:4cqw;transition:.25s;animation:pulse 2s ease-in-out infinite}
+.btn.primary{background:var(--sky);color:var(--navy)}
+.btn.ghost{background:rgba(157,178,191,.18);color:var(--ice);border:1px solid rgba(157,178,191,.35)}
+.hero-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:3cqw;margin-top:6cqw}
+.stat{background:var(--ice);color:var(--navy);border:0;border-radius:4cqw;padding:4cqw;text-align:center}
+.stat b{font-family:'Rakkas',serif;font-size:7cqw;font-weight:400}.stat span{font-size:3.2cqw;color:var(--mid)}
+.notice{background:var(--ice);color:var(--navy);border:0;border-radius:4cqw;box-shadow:0 .8cqw 2cqw rgba(0,0,0,.3);padding:4cqw;margin:5cqw auto;display:flex;gap:3cqw;align-items:flex-start}
+.notice .icon{font-size:6cqw}.notice b{font-weight:800}
+.nav{display:flex;gap:1cqw;overflow:auto;padding:2.6cqw 3cqw 3.4cqw;background:var(--mid);border-radius:5cqw;box-shadow:0 1cqw 3cqw rgba(0,0,0,.25)}
+.nav a{flex:1;text-align:center;white-space:nowrap;text-decoration:none;padding:1.2cqw 2cqw;border-radius:3cqw;background:transparent;border:0;color:var(--ice);font-family:'Rakkas',serif;font-size:5.2cqw;font-weight:400}
+.nav a.active{background:var(--ice);color:var(--navy);border:0;transform:translateY(-.6cqw) scale(1.04)}
+.toolbar{display:grid;grid-template-columns:1fr auto auto;gap:2cqw;align-items:center;margin:0 auto 6cqw}
+.search{background:var(--ice);border:0;border-radius:4cqw;padding:0 3cqw;box-shadow:0 .5cqw 1.5cqw rgba(0,0,0,.15)}.search input{font-family:'Tajawal',sans-serif;padding:3.5cqw;font-size:3.5cqw;color:var(--navy)}
+.progress{background:var(--ice);border:0;padding:2cqw 3cqw;border-radius:4cqw;min-width:26cqw;color:var(--navy)}.progress-top{font-size:3cqw}.progress-bar{height:1cqw;background:rgba(82,109,130,.25);margin-top:1cqw}.progress-bar i{background:var(--navy)}
+.day{background:var(--navy);border:0;border-radius:7cqw;box-shadow:none;margin:0 auto 5cqw;overflow:hidden;scroll-margin-top:80px;color:var(--ice)}
+.day-head{padding:7cqw 6cqw;background:var(--navy);border:0;position:relative}
+.day-badge{width:19cqw;height:19cqw;border-radius:50%;background:var(--ice);color:var(--navy);font-family:'Rakkas',serif;font-size:12cqw;font-weight:400;box-shadow:none}
+.day-kicker{color:var(--sky);font-size:3.8cqw;font-weight:700;margin-top:2cqw}.day-title{font-family:'Rakkas',serif;font-size:8.4cqw;font-weight:400;line-height:1.2;color:var(--ice);margin-top:0}.day-intro{margin-top:1cqw;color:var(--sky);font-size:3.7cqw}.outcomes{gap:2cqw;margin-top:4cqw}.pill{background:var(--ice);color:var(--navy);border-radius:3.5cqw;padding:2.6cqw 3.4cqw;font-size:3.2cqw;font-weight:800}
+.section{padding:5cqw 6cqw;border:0}.section h3{font-family:'Rakkas',serif;font-size:6.2cqw;font-weight:400;line-height:1.3;color:var(--ice);margin-bottom:2cqw}.section h4{font-family:'Rakkas',serif;font-size:5.2cqw;font-weight:400;margin-top:5cqw;margin-bottom:2cqw;color:var(--ice)}.lead{color:var(--ice);font-size:3.8cqw;line-height:1.7}
+.grid,.grid.three{display:flex;flex-direction:column;gap:6cqw;margin-top:6cqw}.card{border:0;background:var(--ice);color:var(--navy);border-radius:4cqw;padding:4.5cqw;box-shadow:none}.card h5{font-family:'Rakkas',serif;font-size:5.3cqw;font-weight:400;margin-bottom:1cqw}.card p{color:var(--mid);font-size:3.7cqw;line-height:1.6}.card .mini{font-size:3.2cqw;color:var(--mid)}
+.flow{gap:2cqw;margin-top:4cqw}.node{padding:2.6cqw 3.4cqw;border-radius:3.5cqw;background:var(--sky);color:var(--navy);font-size:3.8cqw}.arrow{color:var(--sky);font-size:5cqw}
+.visual{border:0;border-radius:5cqw;overflow:hidden;background:var(--mid);margin-top:5cqw;box-shadow:0 .8cqw 2cqw rgba(0,0,0,.3)}.visual-head{padding:3cqw;background:var(--mid);border-bottom:1px solid rgba(221,230,237,.18);font-size:3.2cqw;color:var(--ice)}
+.mock-ui{grid-template-columns:22% 48% 30%;min-height:58cqw}.mock-side{background:#27374D;padding:4cqw}.mock-side b{font-family:'Rakkas',serif;font-size:4.4cqw}.mock-item{font-size:2.9cqw;padding:2cqw;border-radius:2cqw}.mock-item.on{background:var(--ice);color:var(--navy)}.mock-main{background:var(--ice);padding:4cqw}.mock-top{font-size:3cqw;border-bottom:1px solid rgba(39,55,77,.15)}.mock-msg{background:#EEF2F4;border-radius:3cqw;padding:3cqw;margin-top:3cqw;width:80%;font-size:3cqw}.mock-msg.me{background:#CBD7DE}.mock-right{background:#EEF2F4;border-right:1px solid rgba(39,55,77,.12);padding:4cqw}.mock-chip{font-size:2.8cqw;background:#CBD7DE;color:var(--navy);padding:1.8cqw 2.2cqw;border-radius:2cqw}
+.visual-caption{padding:3cqw 4cqw;font-size:3.2cqw;color:var(--mid);background:var(--ice)}
+.diagram{padding:5cqw;background:rgba(157,178,191,.10);border-radius:5cqw}.diagram-row{display:grid;grid-template-columns:1fr;gap:2cqw}.diagram-box{background:var(--sky);border:0;color:var(--navy);border-radius:3cqw;padding:3.5cqw;font-size:3.6cqw;min-height:auto}.diagram-arrow{font-size:5cqw;color:var(--sky);transform:rotate(90deg)}
+.code{background:#18222E;color:var(--ice);border-radius:4cqw;padding:4cqw;font-family:Consolas,"Courier New",monospace;font-size:3.1cqw;line-height:1.65;margin-top:3cqw}.code .c{color:var(--sky)}.code .k{color:#DDE6ED}.code .s{color:#9DB2BF}
+.steps{gap:3cqw;margin-top:4cqw}.step{padding:4cqw 12cqw 4cqw 4cqw;background:var(--mid);border:.5cqw dashed var(--sky);border-radius:4cqw;color:var(--ice)}.step:before{right:3cqw;top:3cqw;width:7cqw;height:7cqw;background:var(--sky);color:var(--navy);font-size:3cqw}.step b{font-size:3.8cqw}.step span{color:var(--ice);opacity:.85;font-size:3.4cqw}
+.callout{padding:4cqw;border-radius:4cqw;margin-top:4cqw;border:0}.callout.info{background:rgba(157,178,191,.16);border:1px solid rgba(157,178,191,.3)}.callout.tip{background:rgba(221,230,237,.12);border:1px solid rgba(221,230,237,.2)}.callout.warn,.callout.danger{background:rgba(82,109,130,.45);border:1px solid rgba(157,178,191,.3)}.callout b{color:var(--ice);font-size:4cqw}.callout p{font-size:3.5cqw;color:var(--ice)}
+.accordion{border:1px solid rgba(157,178,191,.3);border-radius:4cqw;overflow:hidden;margin-top:4cqw}.acc{border-bottom:1px solid rgba(157,178,191,.25)}.acc button{background:var(--mid);color:var(--ice);padding:4cqw;text-align:right;font-size:3.6cqw}.acc .body{padding:0 4cqw 4cqw;background:var(--mid);color:var(--ice);font-size:3.4cqw}
+.lab{background:var(--ice);color:var(--navy);border:0;border-radius:5cqw;padding:5cqw;margin-top:5cqw}.lab-head{display:flex;align-items:center}.lab h4{color:var(--navy);font-family:'Rakkas',serif;font-size:6cqw}.lab .task{font-size:3.7cqw;color:var(--mid);margin-top:2cqw}.checklist{gap:2cqw;margin-top:3cqw}.check{gap:2cqw;font-size:3.5cqw;color:var(--navy)}.check input{width:5cqw;height:5cqw}.result{margin-top:3cqw;font-size:3.4cqw;color:var(--mid)}
+.quiz{margin-top:5cqw;border:0;border-radius:5cqw;padding:5cqw;background:var(--ice);color:var(--navy)}.q{padding:3cqw 0;border-bottom:1px solid rgba(39,55,77,.15)}.q p{font-size:3.7cqw}.opts button{border:0;background:var(--mid);color:var(--ice);border-radius:3cqw;padding:2.5cqw 3cqw;font-size:3.3cqw}.opts button.correct{background:var(--sky);color:var(--navy)}
+footer{background:var(--navy);color:var(--ice);border-radius:7cqw;padding:7cqw 6cqw;margin-bottom:6cqw}footer h2{font-family:'Rakkas',serif;font-size:10cqw;font-weight:400}footer p{font-size:3.8cqw;color:var(--sky);margin-top:3cqw}.sources{display:flex;flex-wrap:wrap;gap:2cqw;margin-top:5cqw}.sources a{background:var(--sky);color:var(--navy);text-decoration:none;padding:2.6cqw 3.4cqw;border-radius:3.5cqw;font-size:3.3cqw;font-weight:800}
+/* Original motion language */
 @keyframes tw{50%{transform:scale(1.35) rotate(25deg);opacity:.7}}
 @keyframes wig{50%{rotate:4deg}}
 @keyframes pulse{50%{transform:scale(1.04)}}
 @keyframes bob{50%{transform:translateY(-1.6cqw)}}
 @keyframes pop{0%{opacity:0;transform:scale(.5) rotate(-8deg)}70%{transform:scale(1.12)}100%{opacity:1;transform:none}}
 @keyframes nudge{50%{transform:translateX(-1.2cqw)}}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.r{opacity:1!important;transform:none!important}.ch,.dg i{opacity:1!important}}
-.card p b{color:var(--navy);font-weight:800}.card p{margin-top:1.4cqw}
-.sb{max-width:62cqw;margin:0 auto 7cqw;background:var(--ice);border-radius:5cqw;padding:3cqw;color:var(--navy);font-weight:800;font-size:4cqw;direction:ltr;text-align:left}
-.sb div{padding:2cqw 3cqw;border-radius:3cqw}
-.sb.in div{animation:hl 8s infinite;animation-delay:calc(var(--i)*1s)}
-@keyframes hl{0%,12%{background:var(--navy);color:var(--ice)}13%,100%{background:none}}
-.dg{display:block;position:relative;aspect-ratio:1000/580;margin:6cqw -2cqw;padding:0;overflow:hidden;border-radius:5cqw;background:repeating-radial-gradient(circle at 0% 100%,transparent 0 7cqw,rgba(221,230,237,.07) 7cqw 7.3cqw),linear-gradient(150deg,var(--mid),var(--navy))}
-.dg svg{position:absolute;inset:0;width:100%;height:100%}
-.dg path{fill:none;stroke:var(--ice);stroke-width:1.6;vector-effect:non-scaling-stroke;opacity:.75;stroke-dasharray:1;stroke-dashoffset:1}
-.dg.in path{animation:draw 2.4s ease forwards}
-.dot{position:absolute;width:2.6cqw;height:2.6cqw;margin:-1.3cqw 0 0 -1.3cqw;border-radius:50%;background:var(--ice);box-shadow:0 0 0 1.1cqw rgba(221,230,237,.2);opacity:0}
-.dg.in .dot{animation:pop .5s calc(var(--i)*.35s + .3s) both}
-.cap{position:absolute;opacity:0;color:var(--ice)}
-.cap{width:17cqw;text-align:center;font-weight:300;line-height:1.5;transform:translate(-50%,0);margin-top:2.8cqw}
-.cap b{display:block;font-weight:800;font-size:5.2cqw;line-height:1.1}
-.cap small{display:block;font-size:2.2cqw;opacity:.7;margin:.4cqw 0 1.2cqw}
-.dg.in .cap{animation:fin .7s calc(var(--i)*.35s + .5s) both}
-.sp{position:absolute;color:var(--ice);font-size:3.4cqw;animation:tw 3s ease-in-out infinite}
-@keyframes draw{to{stroke-dashoffset:0}}
-@keyframes fin{from{opacity:0;translate:0 2cqw}to{opacity:1;translate:0 0}}
-@media (prefers-reduced-motion:reduce){.dg path{stroke-dashoffset:0}.dot,.cap,.num{opacity:1!important}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media (min-width:700px){.container{padding-left:0;padding-right:0}.hero,.day,footer{border-radius:48px}.hero-inner,.day-head,.section,footer{padding-left:42px;padding-right:42px}.hero-title{font-size:150px}.day-title{font-size:58px}.section h3{font-size:40px}.card h5{font-size:30px}.card p{font-size:18px}.lead{font-size:18px}.step b{font-size:19px}.step span{font-size:16px}.lab h4{font-size:34px}.lab .task,.check{font-size:17px}}
+
+
+/* ===== Responsive Typography Edition ===== */
+html{width:100%;overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:20px}
+body{width:100%;min-width:0;overflow-x:hidden;overscroll-behavior-x:none}
+.container{width:min(100%,760px);max-width:760px;margin-inline:auto}
+.hero,.day,footer{width:100%;max-width:760px}
+.hero-inner{padding-inline:clamp(18px,6vw,48px);padding-top:clamp(28px,7vw,56px);padding-bottom:clamp(24px,6vw,46px)}
+.eyebrow{font-size:clamp(12px,2.8vw,16px)}
+.hero-title{font-size:clamp(58px,15vw,150px);line-height:.98;letter-spacing:-.02em;overflow-wrap:anywhere}
+.hero-sub{font-size:clamp(20px,5.3vw,42px);line-height:1.65}
+.hero-actions{gap:10px}
+.btn{min-height:46px;touch-action:manipulation}
+.hero-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(8px,2.5vw,16px)}
+.stat{min-width:0}.stat b{font-size:clamp(34px,7vw,56px)}.stat span{font-size:clamp(12px,3vw,17px)}
+.notice{font-size:clamp(14px,3.5vw,18px);line-height:1.7}
+.toolbar{grid-template-columns:minmax(0,1fr) auto;gap:10px;margin:0 auto 24px}
+.search{min-width:0}.search input{min-width:0;font-size:16px}
+.progress{min-width:150px}
+#reset{grid-column:1/-1;justify-self:start;min-height:42px;animation:none}
+.day{scroll-margin-top:20px}
+.day-head{padding:clamp(26px,7vw,52px) clamp(20px,6vw,46px)}
+.day-badge{width:clamp(62px,19vw,100px);height:clamp(62px,19vw,100px);font-size:clamp(38px,12vw,64px)}
+.day-kicker{font-size:clamp(13px,3.5vw,18px)}
+.day-title{font-size:clamp(38px,8.4vw,64px);overflow-wrap:anywhere}
+.day-intro,.lead{font-size:clamp(16px,3.8vw,21px)}
+.pill{font-size:clamp(12px,3vw,15px)}
+.section{padding:clamp(28px,6vw,48px) clamp(20px,6vw,46px)}
+.section h3{font-size:clamp(30px,6.2vw,46px)}
+.section h4{font-size:clamp(24px,5.2vw,36px)}
+.grid,.grid.three{gap:clamp(14px,5vw,30px)}
+.card{padding:clamp(18px,4.5vw,30px)}
+.card h5{font-size:clamp(25px,5.3vw,38px)}
+.card p{font-size:clamp(15px,3.7vw,20px)}
+.flow{align-items:stretch}.node{font-size:clamp(14px,3.8vw,18px)}
+.visual{margin-inline:0}.mock-ui{grid-template-columns:minmax(92px,22%) minmax(0,48%) minmax(120px,30%)}
+.mock-main,.mock-side,.mock-right{min-width:0}.mock-msg{max-width:100%;overflow-wrap:anywhere}
+.diagram{overflow:hidden}.diagram-box{font-size:clamp(14px,3.6vw,18px)}
+.code{font-size:clamp(12px,3.1vw,15px);max-width:100%;-webkit-overflow-scrolling:touch}
+.step b{font-size:clamp(16px,3.8vw,20px)}.step span{font-size:clamp(14px,3.4vw,17px)}
+.callout p{font-size:clamp(14px,3.5vw,18px)}
+.acc button{font-size:clamp(15px,3.6vw,19px)}.acc .body{font-size:clamp(14px,3.4vw,17px)}
+.lab h4{font-size:clamp(28px,6vw,40px)}.lab .task,.check{font-size:clamp(15px,3.7vw,19px)}
+.quiz{overflow:hidden}.q p{font-size:clamp(16px,3.7vw,20px)}.opts button{font-size:clamp(13px,3.3vw,16px);min-height:42px;touch-action:manipulation}
+footer{padding:clamp(30px,7vw,54px) clamp(20px,6vw,46px)}footer h2{font-size:clamp(42px,10vw,72px)}footer p{font-size:clamp(16px,3.8vw,20px)}
+/* S25 Ultra / modern Android safe-area tuning */
+@media (max-width:600px){
+  .container{width:100%;padding-inline:10px}
+  .hero,.day,footer{border-radius:28px}
+  .hero{margin-top:8px}
+  .hero-inner{padding-inline:20px}
+  .hero-title{font-size:clamp(56px,17vw,88px)}
+  .hero-sub{font-size:clamp(20px,5.4vw,28px);padding:28px 22px;border-radius:24px}
+  .hero-actions{display:grid;grid-template-columns:1fr}
+  .btn{width:100%}
+  .hero-stats{gap:9px}.stat{padding:15px 10px;border-radius:22px}
+  .notice{margin-inline:10px;border-radius:24px;padding:18px 16px}
+  .toolbar{padding-inline:10px;grid-template-columns:1fr;gap:9px}
+  .progress{min-width:0;width:100%}
+  #reset{width:auto;justify-self:stretch}
+  .day{margin-bottom:14px}
+  .day-head,.section{padding-inline:20px}
+  .mock-ui{grid-template-columns:88px minmax(0,1fr)}
+  .mock-right{display:none}
+  .visual-head{font-size:11px}
+  .diagram-row{gap:8px}
+  .section{overflow:hidden}
+  .code{border-radius:18px}
+}
+@media (max-width:380px){
+  .container{padding-inline:8px}
+  .hero-inner{padding-inline:16px}
+  .day-head,.section{padding-inline:16px}
+  .hero-title{font-size:54px}
+  .hero-sub{font-size:19px;padding:24px 18px}
+  .mock-ui{grid-template-columns:76px minmax(0,1fr)}
+  .mock-item{font-size:10px}
+}
+@media (min-width:601px) and (max-width:1100px){
+  .container{width:min(100% - 28px,760px)}
+}
+@media (min-width:1101px){
+  .container{width:760px}
+  body{background:linear-gradient(180deg,#dfe6eb 0%,#cfdbe2 100%)}
+}
+
+
+/* Interactive learning gates */
+.day.locked{position:relative;max-height:360px;overflow:hidden}
+.day.locked>*:not(.lesson-lock){filter:blur(3px);pointer-events:none;user-select:none}
+.lesson-lock{position:absolute;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;padding:7cqw;background:linear-gradient(180deg,rgba(39,55,77,.08),rgba(39,55,77,.9) 68%);color:var(--ice);text-align:center}
+.lesson-lock .lock-card{width:min(100%,560px);background:var(--navy);border:1px solid rgba(157,178,191,.35);border-radius:5cqw;padding:6cqw;box-shadow:0 1cqw 3cqw rgba(0,0,0,.3)}
+.lesson-lock .lock-icon{font-size:11cqw;animation:tw 3s ease-in-out infinite}
+.lesson-lock h3{font-family:'Rakkas',serif;font-size:7cqw;font-weight:400;margin-top:2cqw;color:var(--ice)}
+.lesson-lock p{font-size:3.7cqw;color:var(--sky);line-height:1.7;margin-top:1.5cqw}
+.lesson-lock .lock-btn,.lesson-gate .next-lesson{border:0;background:var(--sky);color:var(--navy);font-family:'Tajawal',sans-serif;font-weight:800;border-radius:3.5cqw;padding:2.8cqw 4cqw;margin-top:3cqw;cursor:pointer}
+.lesson-gate{margin-top:5cqw;background:var(--ice);color:var(--navy);border-radius:5cqw;padding:5cqw;box-shadow:0 .8cqw 2cqw rgba(0,0,0,.22)}
+.lesson-gate h3{font-family:'Rakkas',serif;font-weight:400;font-size:7cqw;margin:0}
+.lesson-gate .gate-note{font-size:3.6cqw;color:var(--mid);margin-top:1cqw}
+.lesson-gate .gate-question{padding:4cqw 0;border-bottom:1px solid rgba(39,55,77,.14)}
+.lesson-gate .gate-question:last-of-type{border-bottom:0}
+.lesson-gate .gate-question p{font-weight:800;font-size:3.7cqw;line-height:1.6}
+.lesson-gate .gate-options{display:flex;flex-wrap:wrap;gap:2cqw;margin-top:2.5cqw}
+.lesson-gate .gate-options button{flex:1 1 42%;min-height:46px;border:0;background:var(--mid);color:var(--ice);border-radius:3cqw;padding:2.6cqw 3cqw;cursor:pointer;font-family:'Tajawal',sans-serif;font-weight:800}
+.lesson-gate .gate-options button.good{background:var(--sky);color:var(--navy);animation:pop .45s both}
+.lesson-gate .gate-options button.bad{background:#3e4652;color:var(--ice);animation:wig .3s}
+.lesson-gate .gate-result{margin-top:3cqw;font-size:3.5cqw;font-weight:800;color:var(--mid);min-height:1.7em}
+.lesson-gate .next-lesson{display:none;width:100%;background:var(--navy);color:var(--ice)}
+.lesson-gate.passed .next-lesson{display:block;animation:pop .5s both}
+.story-link{display:flex;align-items:center;gap:2cqw;margin-top:3cqw;color:var(--sky);font-size:3.4cqw;font-weight:800}
+.story-link b{color:var(--ice)}
+@media(max-width:600px){
+ .lesson-lock{padding:5cqw}.lesson-lock .lock-card{padding:6cqw}.lesson-lock h3{font-size:8cqw}.lesson-lock p{font-size:3.7cqw}
+ .lesson-gate{padding:5cqw}.lesson-gate h3{font-size:7.2cqw}.lesson-gate .gate-question p{font-size:3.8cqw}
+ .lesson-gate .gate-options{display:grid;grid-template-columns:1fr}.lesson-gate .gate-options button{width:100%;min-height:48px}
+}
+
+
+/* ===== Final visual polish: original identity + small-screen first ===== */
+:root{
+  --navy:#27374D;
+  --navy2:#27374D;
+  --mid:#526D82;
+  --sky:#9DB2BF;
+  --ice:#DDE6ED;
+  --paper:#27374D;
+  --ink:#27374D;
+  --muted:#526D82;
+  --line:rgba(157,178,191,.35);
+  --accent:#9DB2BF;
+  --accent2:#DDE6ED;
+  --code:#18222E;
+}
+body{
+  background:#DDE6ED;
+  color:var(--navy);
+  font-family:'Tajawal',sans-serif;
+}
+.container{width:min(100%,760px);max-width:760px}
+.hero,.day,footer{max-width:760px}
+.hero{background:var(--navy);border-radius:clamp(24px,7vw,48px)}
+.hero-inner{padding:clamp(26px,5.5vw,48px) clamp(18px,6vw,44px) clamp(26px,5.5vw,44px)}
+.eyebrow{font-size:clamp(11px,2.4vw,15px)}
+.hero-title{
+  font-family:'Rakkas',serif;
+  font-weight:400;
+  font-size:clamp(50px,10.8vw,92px);
+  line-height:1.18;
+  letter-spacing:0;
+  max-width:100%;
+  margin-top:14px;
+  overflow-wrap:normal;
+  word-break:normal;
+}
+.hero-title span{color:var(--sky)}
+.hero-sub{
+  font-family:'Aref Ruqaa',serif;
+  font-size:clamp(17px,3.7vw,27px);
+  line-height:1.8;
+  padding:clamp(20px,4.5vw,34px) clamp(18px,4vw,30px);
+  border-radius:clamp(20px,4vw,30px);
+  margin-top:24px;
+}
+.hero-actions{margin-top:20px}
+.btn{font-size:clamp(13px,2.8vw,17px);padding:12px 16px;min-height:46px}
+.hero-stats{margin-top:20px;gap:10px}
+.stat{padding:13px;border-radius:18px}
+.stat b{font-family:'Rakkas',serif;font-size:clamp(28px,6vw,48px)}
+.stat span{font-size:clamp(11px,2.5vw,15px)}
+.notice{font-size:clamp(14px,3vw,18px)}
+
+.day{background:var(--navy);border-radius:clamp(24px,7vw,48px);color:var(--ice)}
+.day-head{padding:clamp(24px,5.5vw,44px) clamp(18px,6vw,44px)}
+.day-badge{width:clamp(58px,14vw,88px);height:clamp(58px,14vw,88px);font-size:clamp(34px,8vw,58px)}
+.day-kicker{font-size:clamp(12px,2.7vw,17px)}
+.day-title{font-size:clamp(32px,6.7vw,54px);line-height:1.3}
+.day-intro,.lead{font-size:clamp(15px,3.25vw,20px);line-height:1.85}
+.story-link{font-size:clamp(13px,2.9vw,17px);line-height:1.7}
+.section{padding:clamp(24px,5.5vw,42px) clamp(18px,6vw,44px)}
+.section h3{font-size:clamp(27px,5.1vw,40px)}
+.section h4{font-size:clamp(22px,4.4vw,34px)}
+.card h5{font-size:clamp(21px,4.3vw,32px)}
+.card p{font-size:clamp(14px,3.1vw,19px)}
+.flow{justify-content:center}
+.node{font-size:clamp(13px,3vw,17px)}
+.arrow{font-size:clamp(17px,4vw,24px)}
+
+.visual{background:var(--mid);border-radius:clamp(20px,5vw,34px);margin-top:18px}
+.visual-head{font-size:clamp(10px,2.5vw,14px);padding:11px 14px;background:var(--mid);color:var(--ice)}
+.visual-caption{font-size:clamp(12px,2.7vw,16px);line-height:1.7;background:var(--ice);color:var(--mid);padding:12px 15px}
+
+/* Compact, legible illustrative UI on phones */
+.mock-ui{grid-template-columns:minmax(74px,22%) minmax(0,1fr);min-height:250px}
+.mock-right{display:none}
+.mock-side{background:#27374D;padding:12px 8px;overflow:hidden}
+.mock-side b{font-family:'Rakkas',serif;font-size:clamp(14px,3.5vw,22px);white-space:nowrap}
+.mock-item{font-size:clamp(9px,2.2vw,13px);padding:7px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mock-main{min-width:0;background:var(--ice);padding:14px}
+.mock-top{font-size:clamp(10px,2.3vw,14px)}
+.mock-msg{font-size:clamp(10px,2.4vw,14px);line-height:1.6;max-width:82%}
+
+/* Curved lesson path, not cards + arrows */
+.story-visual{background:var(--mid)}
+.story-map{position:relative;height:clamp(250px,48vw,390px);overflow:hidden;background:
+  radial-gradient(circle at 50% 50%,rgba(221,230,237,.08),transparent 45%),
+  repeating-radial-gradient(circle at 0% 100%,transparent 0 46px,rgba(221,230,237,.055) 47px 49px);
+}
+.story-map svg{position:absolute;inset:0;width:100%;height:100%}
+.story-rings{fill:none;stroke:rgba(221,230,237,.09);stroke-width:2}
+.story-line{fill:none;stroke:var(--ice);stroke-width:3;opacity:.85}
+.story-nodes{position:absolute;inset:0}
+.story-node{position:absolute;transform:translate(-50%,-50%);width:clamp(72px,13vw,118px);text-align:center;color:var(--ice);line-height:1.35}
+.story-node .dot{
+  width:clamp(16px,3.6vw,28px);height:clamp(16px,3.6vw,28px);margin:0 auto 6px;
+  border-radius:50%;background:var(--sky);border:4px solid rgba(221,230,237,.22);
+  box-shadow:0 0 0 5px rgba(221,230,237,.08);display:grid;place-items:center;
+}
+.story-node.done .dot{background:var(--ice);color:var(--navy)}
+.story-node.current .dot{background:var(--ice);box-shadow:0 0 0 7px rgba(221,230,237,.13);animation:pulse 2s ease-in-out infinite}
+.story-node .num{font-family:'Tajawal',sans-serif;font-weight:900;font-size:clamp(16px,3.4vw,27px)}
+.story-node .label{display:block;font-size:clamp(11px,2.5vw,15px);color:var(--ice)}
+.story-node .small{display:block;font-size:clamp(9px,2vw,12px);color:var(--sky);margin-top:2px}
+
+/* Code, steps, labs, quiz */
+.code{font-size:clamp(11px,2.7vw,14px)}
+.step b{font-size:clamp(15px,3.3vw,19px)}
+.step span{font-size:clamp(13px,2.9vw,16px)}
+.lab h4{font-size:clamp(24px,5vw,36px)}
+.lab .task,.check{font-size:clamp(14px,3.1vw,18px)}
+.quiz .q p{font-size:clamp(15px,3.2vw,19px)}
+.opts button{font-size:clamp(12px,2.7vw,15px);min-height:44px}
+
+/* Gate cards stay compact and readable */
+.lesson-gate h3{font-size:clamp(26px,5vw,38px)}
+.lesson-gate .gate-note,.lesson-gate .gate-result{font-size:clamp(13px,2.9vw,17px)}
+.lesson-gate .gate-question p{font-size:clamp(14px,3vw,18px)}
+.lesson-gate .gate-options button{font-size:clamp(13px,2.8vw,16px)}
+
+@media(max-width:600px){
+  .container{padding-inline:9px}
+  .hero,.day,footer{border-radius:26px}
+  .hero-title{font-size:clamp(48px,13vw,68px);line-height:1.25}
+  .hero-sub{font-size:clamp(17px,4.2vw,22px)}
+  .hero-actions{grid-template-columns:1fr}
+  .hero-stats{gap:8px}
+  .stat{padding:12px 8px}
+  .toolbar{padding-inline:9px}
+  .day-head,.section{padding-inline:18px}
+  .day-title{font-size:clamp(29px,7vw,42px)}
+  .section h3{font-size:clamp(25px,6vw,34px)}
+  .flow{gap:6px}
+  .node{font-size:12px;padding:8px 10px}
+  .arrow{font-size:17px}
+  .mock-ui{grid-template-columns:78px minmax(0,1fr);min-height:245px}
+  .mock-side{padding:10px 6px}
+  .mock-main{padding:11px}
+  .mock-msg{width:92%;max-width:92%}
+  .story-map{height:300px}
+}
+@media(min-width:601px){
+  .container{width:min(100% - 28px,760px)}
+  .hero-title{font-size:clamp(58px,9vw,92px)}
+}
+@media(min-width:1100px){
+  .container{width:760px}
+}
+
+
+/* Hero light card: dark typography, no duplicated pseudo-copy */
+.hero-sub{
+  background:var(--ice)!important;
+  color:var(--navy)!important;
+  font-family:'Aref Ruqaa',serif!important;
+  font-size:clamp(17px,3.9vw,27px)!important;
+  line-height:1.85!important;
+  padding:clamp(20px,4.5vw,34px) clamp(18px,4vw,30px)!important;
+}
+.hero-sub:before{display:none!important;content:none!important}
+
+
+/* =========================================================
+   JOURNEY UI: the whole course is one connected learning path
+   ========================================================= */
+.day{
+  position:relative;
+  overflow:hidden;
+}
+.day::before{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  right:clamp(18px,4.2vw,34px);
+  width:2px;
+  background:linear-gradient(180deg,
+    rgba(157,178,191,0),
+    rgba(157,178,191,.62) 8%,
+    rgba(157,178,191,.62) 92%,
+    rgba(157,178,191,0));
+  pointer-events:none;
+}
+.day-head,.day .section{
+  position:relative;
+}
+.day-head::after,.day .section::after{
+  content:"";
+  position:absolute;
+  right:clamp(13px,3.25vw,29px);
+  width:13px;height:13px;
+  border-radius:50%;
+  background:var(--sky);
+  border:3px solid var(--navy);
+  box-shadow:0 0 0 4px rgba(157,178,191,.10);
+  z-index:2;
+}
+.day-head::after{top:38px}
+.day .section::after{top:30px}
+.day-head{padding-right:clamp(54px,10vw,82px)!important}
+.day .section{padding-right:clamp(54px,10vw,82px)!important}
+
+/* Cards become journey milestones, not floating cards */
+.grid,.grid.three{
+  display:grid!important;
+  grid-template-columns:1fr!important;
+  gap:0!important;
+  margin-top:clamp(18px,4vw,28px)!important;
+  position:relative;
+}
+.grid::before{
+  content:"";
+  position:absolute;
+  top:0;bottom:0;
+  right:6px;
+  width:1px;
+  background:rgba(157,178,191,.20);
+}
+.card{
+  position:relative;
+  background:transparent!important;
+  border:0!important;
+  border-bottom:1px dashed rgba(157,178,191,.32)!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  padding:clamp(16px,3.5vw,25px) 10px clamp(18px,4vw,28px) 0!important;
+  color:var(--ice)!important;
+  min-width:0;
+}
+.card:last-child{border-bottom:0!important}
+.card::before{
+  content:"";
+  position:absolute;
+  right:0;
+  top:clamp(21px,4vw,30px);
+  width:11px;height:11px;
+  border-radius:50%;
+  background:var(--sky);
+  border:3px solid var(--navy);
+  transform:translateX(50%);
+  box-shadow:0 0 0 4px rgba(157,178,191,.08);
+}
+.card h5{
+  color:var(--ice)!important;
+  font-family:'Rakkas',serif!important;
+  font-weight:400!important;
+  font-size:clamp(21px,4.5vw,31px)!important;
+  line-height:1.35;
+  margin:0 0 6px;
+}
+.card p{
+  color:var(--sky)!important;
+  font-size:clamp(14px,3.1vw,19px)!important;
+  line-height:1.85;
+}
+.card p b{color:var(--ice)!important}
+.card .mini{
+  color:var(--sky)!important;
+  font-size:clamp(12px,2.7vw,16px)!important;
+  margin-top:7px;
+}
+
+/* Connected flow diagrams, no pill-card stacking */
+.flow{
+  position:relative;
+  display:grid!important;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:0!important;
+  align-items:start;
+  padding:24px 4px 8px;
+  margin-top:12px;
+}
+.flow::before{
+  content:"";
+  position:absolute;
+  left:7%;
+  right:7%;
+  top:42px;
+  height:2px;
+  background:linear-gradient(90deg,rgba(157,178,191,.12),rgba(221,230,237,.75),rgba(157,178,191,.12));
+}
+.flow .node{
+  position:relative;
+  z-index:1;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  gap:7px;
+  min-width:0;
+  padding:0 6px!important;
+  background:transparent!important;
+  color:var(--ice)!important;
+  font-size:clamp(12px,2.8vw,17px)!important;
+  line-height:1.35;
+  text-align:center;
+  border-radius:0!important;
+  white-space:normal;
+}
+.flow .node::before{
+  content:"";
+  width:20px;height:20px;
+  border-radius:50%;
+  background:var(--sky);
+  border:4px solid var(--navy);
+  box-shadow:0 0 0 5px rgba(157,178,191,.08);
+}
+.flow .arrow{
+  display:none!important;
+}
+
+/* Steps are milestones on the same path */
+.steps{
+  position:relative;
+  display:grid;
+  gap:0!important;
+  margin-top:18px;
+  padding-right:4px;
+}
+.steps::before{
+  content:"";
+  position:absolute;
+  right:13px;
+  top:13px;bottom:13px;
+  width:2px;
+  background:rgba(157,178,191,.35);
+}
+.step{
+  position:relative;
+  background:transparent!important;
+  border:0!important;
+  border-bottom:1px dashed rgba(157,178,191,.24)!important;
+  border-radius:0!important;
+  color:var(--ice)!important;
+  padding:18px 48px 18px 8px!important;
+}
+.step:last-child{border-bottom:0!important}
+.step::before{
+  right:0!important;top:18px!important;
+  width:27px!important;height:27px!important;
+  background:var(--sky)!important;color:var(--navy)!important;
+  border:3px solid var(--navy);
+}
+.step b{color:var(--ice)!important}
+.step span{color:var(--sky)!important}
+
+/* Callouts/labs/quiz become checkpoints, not floating cards */
+.callout,.lab,.quiz{
+  border-radius:0!important;
+  box-shadow:none!important;
+  border:0!important;
+  border-right:3px solid var(--sky)!important;
+  background:rgba(157,178,191,.10)!important;
+  color:var(--ice)!important;
+}
+.callout{padding:18px 20px!important}
+.callout b,.lab h4{color:var(--ice)!important}
+.callout p,.lab .task,.check{color:var(--sky)!important}
+.lab{padding:22px 20px!important}
+.quiz{padding:22px 20px!important}
+.quiz .q{border-bottom:1px dashed rgba(157,178,191,.30)}
+.quiz-score{background:rgba(157,178,191,.13)!important;color:var(--ice)!important}
+
+/* Side-bar illustrative UI: keep all labels inside, aligned and readable */
+.mock-ui{
+  grid-template-columns:minmax(126px,34%) minmax(0,66%)!important;
+  min-height:250px;
+}
+.mock-right{display:none!important}
+.mock-side{
+  background:var(--navy)!important;
+  color:var(--ice)!important;
+  padding:14px 10px!important;
+  overflow:visible!important;
+}
+.mock-side b{
+  color:var(--ice)!important;
+  font-family:'Rakkas',serif!important;
+  font-size:clamp(17px,3.7vw,25px)!important;
+  line-height:1.2;
+}
+.mock-item{
+  color:var(--ice)!important;
+  background:transparent!important;
+  font-size:clamp(10px,2.5vw,14px)!important;
+  line-height:1.35!important;
+  padding:8px 7px!important;
+  margin:3px 0!important;
+  white-space:normal!important;
+  overflow:visible!important;
+  text-overflow:clip!important;
+  overflow-wrap:anywhere;
+  border-radius:10px!important;
+}
+.mock-item.on{
+  background:var(--sky)!important;
+  color:var(--navy)!important;
+  font-weight:900;
+}
+.mock-main{
+  background:var(--ice)!important;
+  color:var(--navy)!important;
+}
+.mock-top{color:var(--navy)!important}
+.mock-msg{color:var(--navy)!important;background:#eef3f6!important}
+.mock-msg.me{background:#c9d6de!important}
+
+/* Lesson path: keep all seven nodes inside the viewport */
+.story-map{height:clamp(280px,48vw,390px)!important}
+.story-line{stroke-width:3!important}
+.story-node{
+  width:clamp(72px,12vw,112px)!important;
+  max-width:20%!important;
+}
+.story-node .label{font-size:clamp(10px,2.3vw,15px)!important}
+.story-node .small{font-size:clamp(8px,1.9vw,12px)!important}
+
 </style>
 </head>
 <body>
-<div class="page">
-
-<header class="frame hero" id="top">
-  <div class="top"><span>chatwoot course</span><span>💬 خطة ٧ أيام</span></div>
-  <div class="big" style="font-size:24cqw;margin-top:6cqw;color:var(--ice)">اتـــقـــن</div>
-  <div class="big" style="font-size:17cqw;color:var(--sky)">الأتمـــتـــة</div>
-  <svg viewBox="0 0 200 190" aria-hidden="true">
-    <path d="M30 185 C22 110 40 40 105 33 C165 28 186 88 164 130 L152 150 L128 152 L128 185 Z" fill="#DDE6ED"/>
-    <g class="brain"><ellipse cx="108" cy="78" rx="52" ry="40" fill="#9DB2BF"/>
-    <path d="M78 70 q14-14 26 0 t26 0 M72 90 q14 12 28 0 t28 0 M92 52 q10 8 20 0" stroke="#526D82" stroke-width="3" fill="none" stroke-linecap="round"/></g>
-    <circle cx="58" cy="102" r="14" fill="none" stroke="#27374D" stroke-width="4"/><path d="M72 102 h14" stroke="#27374D" stroke-width="4"/>
-    <circle cx="86" cy="28" r="9" fill="#526D82"/><circle cx="130" cy="26" r="9" fill="#526D82"/><path d="M86 28 h44" stroke="#526D82" stroke-width="4"/>
-    <g class="bub"><rect x="150" y="6" width="38" height="26" rx="9" fill="#9DB2BF"/><path d="M162 32 l-4 10 l14-10z" fill="#9DB2BF"/>
-    <circle cx="162" cy="19" r="2.6" fill="#27374D"/><circle cx="170" cy="19" r="2.6" fill="#27374D"/><circle cx="178" cy="19" r="2.6" fill="#27374D"/></g>
-  </svg>
-  <div class="tag">٧ حصص<br>كل يوم درس</div>
-  <div class="note r"><span class="tape t1"></span><span class="tape t2"></span>الاحتراف مش موهبة، ده مهارة بتتبني بالتطبيق والتجربة والربط.</div>
-  <div class="dg r" id="hr" style="margin-top:9cqw"></div>
-  <a class="cta" href="#d0">ابدأ من اليوم الأول 👇</a>
+<header class="hero container" id="top">
+  <div class="hero-inner">
+    <div class="eyebrow"><span>chatwoot course</span><span>💬 Chatwoot + n8n + AI</span></div>
+    <div class="hero-title">اتقن <span>Chatwoot</span><br>وابني Automation حقيقي</div>
+    <p class="hero-sub">٧ أيام مش معمولين علشان تحفظ أسماء الأزرار. الهدف إنك تفهم الـ Support System من أول Conversations لحد Webhooks وAPI وn8n وAI وMulti-Company Architecture.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#day1">ابدأ من اليوم الأول 👇</a>
+      <a class="btn ghost" href="#graduation">مشروع التخرج 🚀</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><b>٧</b><span>أيام دراسة</span></div>
+      <div class="stat"><b>25+</b><span>موضوع عملي</span></div>
+      <div class="stat"><b>7</b><span>Labs وتمارين</span></div>
+      <div class="stat"><b>∞</b><span>سيناريوهات Automation</span></div>
+    </div>
+  </div>
 </header>
 
-<nav><div class="l" id="nv"></div><div class="bar"><b></b></div></nav>
-<main id="days"></main>
-
-<footer class="frame">
-  <div class="big" style="font-size:12cqw;color:var(--ice)">خلصت الكورس؟</div>
-  <div class="note r" style="margin-top:6cqw"><span class="tape t1"></span>ابني مشروع التخرج: شركتين، بوت واحد، وBackup يومي. وساعتها تبقى Pro بجد.</div>
-</footer>
+<div class="notice container">
+  <div class="icon">📌</div>
+  <div><b>ملاحظة مهمة قبل ما تبدأ</b><span>واجهة Chatwoot والخصائص المتاحة ممكن تختلف حسب الإصدار، نوع الاستضافة، والـ Plan. الشرح هنا هدفه يبني عندك الفهم والمنطق، ومع أي تغيير في الواجهة ركّز على اسم الـ Feature والفكرة مش مكان الزر بس.</span></div>
 </div>
 
+
+
+<div class="toolbar container">
+  <label class="search"><span>🔎</span><input id="search" placeholder="دوّر على Conversation أو Webhook أو Automation..." autocomplete="off"></label>
+  <div class="progress"><div class="progress-top"><span>تقدّمك</span><span id="pct">0%</span></div><div class="progress-bar"><i id="bar"></i></div></div>
+  <button class="btn" style="background:#fff;border:1px solid var(--line);color:var(--navy)" id="reset">إعادة التقدم</button>
+</div>
+
+
+<div class="container" id="storyPath" style="margin-bottom:5cqw">
+  <div class="visual story-visual" style="margin-top:0">
+    <div class="visual-head"><span>🧩 رحلة بناء النظام</span><span>Lesson Path</span></div>
+    <div class="story-map" aria-label="رحلة بناء النظام">
+      <svg viewBox="0 0 1000 470" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <radialGradient id="storyGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#DDE6ED" stop-opacity=".30"/>
+            <stop offset="100%" stop-color="#DDE6ED" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <path class="story-rings" d="M20 420 Q160 150 500 215 T980 420"/>
+        <path class="story-line" d="M38 330 Q245 80 500 170 T962 330"/>
+      </svg>
+      <div id="storyNodes" class="story-nodes"></div>
+    </div>
+    <div class="visual-caption">كل يوم بيضيف قطعة جديدة لنفس الـ System. لما تعدّي اختبار اليوم، النقطة اللي بعدها بتنور وتفتح.</div>
+  </div>
+</div>
+
+<main class="container" id="course">
+
+<section class="day" id="day1" data-day="1" data-search="sidebar conversations contacts reports campaigns help center settings notifications avatar conversation status filters folders reply private note macros snooze transcript merge">
+  <div class="day-head"><span class="day-badge">١</span><div class="day-kicker">اليوم الأول</div><h2 class="day-title">افهم Chatwoot قبل ما تحاول تأتمته</h2><p class="day-intro">النهارده هتفهم الخريطة كلها: الـ Sidebar، الـ Conversations، العميل، الـ Filters، الـ Status، وإزاي تفكر في الشات كـ workflow مش مجرد inbox.</p><div class="story-link">↳ <b>القصة:</b> ابدأ بفهم الـ Conversation نفسها، لأن كل Automation بعد كده هتبني عليها.</div><div class="outcomes"><span class="pill">💬 Conversations</span><span class="pill">👥 Contacts</span><span class="pill">🏷️ Labels</span><span class="pill">⏰ Status</span><span class="pill">🧠 Support Thinking</span></div></div>
+  <div class="section"><h3>الفكرة الكبيرة 🧠</h3><p class="lead">Chatwoot بالنسبة للشركة هو المكان اللي بيجمع تواصل العميل وبيحوّله لـ <b>Conversation Lifecycle</b>: العميل يبعت → المحادثة تدخل Inbox → موظف أو Team يستلم → يحصل رد أو Internal Note → المحادثة تتأجل أو تتقفل → بعدها تقدر تقيس وتؤتمت.</p><div class="flow journey-flow"><span class="node">Customer</span><span class="arrow">←</span><span class="node">Channel</span><span class="arrow">←</span><span class="node">Inbox</span><span class="arrow">←</span><span class="node">Conversation</span><span class="arrow">←</span><span class="node">Agent / AI</span></div></div>
+  <div class="section"><h3>خريطة الـ Sidebar</h3><div class="visual"><div class="visual-head"><span>🎨 شكل توضيحي للواجهة</span><span>Illustrative UI</span></div><div class="mock-ui"><aside class="mock-side"><b>CHATWOOT</b><div class="mock-item on">💬 Conversations</div><div class="mock-item">👥 Contacts</div><div class="mock-item">📊 Reports</div><div class="mock-item">📣 Campaigns</div><div class="mock-item">📚 Help Center</div><div class="mock-item">⚙️ Settings</div></aside><div class="mock-main"><div class="mock-top"><b>Conversations</b><span>Mine · Unassigned · All</span></div><div class="mock-msg">عميل: عايز أعرف سعر الستارة للماجِلس.</div><div class="mock-msg me">أهلاً بحضرتك، حاضر هساعدك في السعر والمقاسات.</div></div><aside class="mock-right"><b>Contact</b><div>Ahmed Customer</div><div class="mock-chip">VIP</div><div class="mock-chip">Sales</div><p style="font-size:11px;margin-top:9px">Assignee: Sales Team</p></aside></div><div class="visual-caption">دي رسمة تعليمية عشان تثبت الأماكن في دماغك. لاحقًا استخدم Screenshot من حسابك الحقيقي لو عايز توثق الواجهة حرفيًا.</div></div><div class="grid"><div class="card"><h5>💬 Conversations</h5><p>دي شاشة الشغل الأساسية. هنا بتستقبل، ترد، تعمل Assign، تحط Labels، وتغير Status.</p><div class="mini">فكر فيها: “كل طلب خدمة بيمر من هنا”.</div></div><div class="card"><h5>👥 Contacts</h5><p>قاعدة بيانات العميل: الاسم، الرقم، الإيميل، والبيانات المرتبطة بالمحادثات.</p><div class="mini">الفكرة: Conversation ≠ Contact.</div></div><div class="card"><h5>📊 Reports</h5><p>بتبص من خلالها على حجم الشغل والأداء والزمن وجودة الخدمة.</p></div><div class="card"><h5>⚙️ Settings</h5><p>هنا الجزء الإداري: Agents، Inboxes، Automation، Integrations وغيرها.</p></div></div></div>
+  <div class="section"><h3>Conversation من جوه</h3><p class="lead">في الشات، أنت عندك حاجات لازم تفرق بينهم من أول يوم:</p><div class="grid"><div class="card"><h5>Open / Pending / Snoozed / Resolved</h5><p><b>Open</b> يعني شغالة. <b>Pending</b> معناها مستنية. <b>Snoozed</b> مؤجلة لوقت لاحق. <b>Resolved</b> اتقفلت.</p></div><div class="card"><h5>Reply vs Private Note</h5><p><b>Reply</b> للعميل. <b>Private Note</b> للفريق الداخلي فقط. غلطة صغيرة هنا ممكن تبوظ تجربة العميل.</p></div><div class="card"><h5>Assignee / Team</h5><p>مين ماسك المحادثة؟ موظف محدد ولا Team؟ خلي الفرق ده واضح عندك لأنه أساس الـ Routing.</p></div><div class="card"><h5>Labels / Priority</h5><p>Label بيديك تصنيف، وPriority بتديك أولوية. الاتنين مهمين في الـ Filtering والAutomation والتقارير.</p></div></div>
+    <div class="callout tip"><b>💡 فكر زي مدير خدمة عملاء</b><p>لما العميل يقول “فين الطلب؟” مش أول سؤال تسأله “أحط Label إيه؟”. الأول افهم المشكلة: هل دي متابعة؟ شكوى؟ طلب تعديل؟ وبعدين صمّم الـ workflow اللي يخلي النوع ده يتحرك لوحده.</p></div>
+    <div class="steps"><div class="step"><b>افتح Conversations</b><span>ابدأ بـ Unassigned أو Mine وشوف الفرق.</span></div><div class="step"><b>افتح Conversation تجريبية</b><span>حدد العميل، الـ Inbox، الـ Assignee، والـ Status.</span></div><div class="step"><b>اكتب Reply</b><span>بعدها جرّب Private Note واعمل @Mention لزميل.</span></div><div class="step"><b>جرّب Snooze ثم Resolve</b><span>لاحظ إن تغيير الـ Status جزء من الـ Lifecycle نفسه.</span></div></div>
+  </div>
+  <div class="section"><h3>Filters وFolders وSegments</h3><p class="lead">الفكرة ببساطة: لما البيانات تكبر، ما ينفعش تفضل تقلّب بإيدك. اعمل Filter منطقي واحفظه.</p><div class="code"><span class="c">// مثال ذهني للفلتر</span>\nInbox = WhatsApp\nAND Label = VIP\nAND Status = Open\n\n<span class="c">// النتيجة</span>\nهاتلي محادثات واتساب المفتوحة لعملاء VIP</div><div class="callout info"><b>📌 فرق مهم</b><p>Conversation Filter بيشتغل على المحادثات. Contacts Segment بيشتغل على العملاء. الاتنين شبه بعض في فكرة “التجميع”، لكن البيانات اللي بتفلتر عليها مختلفة.</p></div></div>
+  <div class="section"><h3>📸 الصورة اللي لازم تضيفها لاحقًا</h3><p class="lead">حط Screenshot حقيقي من شاشة Conversations عندك، وحط أرقام ① ② ③ فوق الـ Conversation List / Chat / Contact Panel / Status. الصورة لازم تكون من نسختك أنت عشان ما نثبتش شكل واجهة قديمة.</p></div>
+  <div class="section"><div class="lab"><div class="lab-head"><h4>🧪 Lab اليوم الأول: رحلة العميل كاملة</h4><span class="pill">10–15 دقيقة</span></div><p class="task">اعمل Conversation تجريبية لعميل بيسأل عن السعر، ثم تعامل معها كأنك موظف خدمة عملاء حقيقي.</p><div class="checklist"><label class="check"><input type="checkbox" data-progress><span>عملت Contact تجريبي.</span></label><label class="check"><input type="checkbox" data-progress><span>فتحت Conversation وحطيت Assignee أو Team.</span></label><label class="check"><input type="checkbox" data-progress><span>كتبت Reply ثم Private Note.</span></label><label class="check"><input type="checkbox" data-progress><span>حطيت Label وغيّرت Priority.</span></label><label class="check"><input type="checkbox" data-progress><span>جرّبت Snooze ثم Resolve.</span></label></div><div class="result">✅ Expected Result: تبقى فاهم رحلة الـ Conversation من أول رسالة لحد Resolve.</div></div><div class="quiz"><h4>🎯 اختبار سريع</h4><div class="q"><p>1) لو عايز تكتب ملاحظة للفريق بدون ما العميل يشوفها؟</p><div class="opts"><button data-correct>Private Note</button><button>Reply</button><button>Canned Response</button></div></div><div class="q"><p>2) مين بيمثل سجل العميل الأساسي؟</p><div class="opts"><button>Conversation</button><button data-correct>Contact</button><button>Label</button></div></div><div class="quiz-score">اضغط اختيار، والصفحة هتقولك صح أو غلط.</div></div></div>
+</section>
+
+<section class="day" id="day2" data-day="2" data-search="inbox channel website whatsapp facebook instagram telegram email business hours greeting auto assignment collaborators pre chat form widget builder configuration">
+  <div class="day-head"><span class="day-badge">٢</span><div class="day-kicker">اليوم الثاني</div><h2 class="day-title">Inboxes والقنوات: منين العميل بيدخل؟</h2><p class="day-intro">النهارده هنفصل أهم Concept في Chatwoot: الفرق بين Channel وInbox، وبعدين نضبط Business Hours وAuto-assignment وWidget.</p><div class="story-link">↳ <b>القصة:</b> دلوقتي هنجيب الرسائل للنظام ونفهم إزاي الـ Inboxes بتنظم القنوات.</div><div class="outcomes"><span class="pill">📥 Inbox</span><span class="pill">📲 Channels</span><span class="pill">🕘 Business Hours</span><span class="pill">👥 Collaborators</span><span class="pill">🌐 Widget</span></div></div>
+  <div class="section"><h3>Channel vs Inbox</h3><p class="lead">فكر فيها كده: <b>Channel</b> هو نوع وسيلة التواصل، أما <b>Inbox</b> فهو instance محدد من القناة جوه حسابك. نفس نوع القناة ممكن يبقى عندك منه أكتر من Inbox.</p><div class="flow"><span class="node">WhatsApp Channel</span><span class="arrow">→</span><span class="node">Sales WhatsApp Inbox</span><span class="arrow">→</span><span class="node">Sales Team</span></div><div class="grid"><div class="card"><h5>📲 WhatsApp Inbox</h5><p>الرسائل من رقم/قناة الواتساب بتدخل مكان واحد، وتقدر تربط عليه Agents وRouting.</p></div><div class="card"><h5>🌐 Website Inbox</h5><p>Live Chat من الموقع. مناسب للدعم أو المبيعات أو مشروع معين.</p></div><div class="card"><h5>✉️ Email Inbox</h5><p>تحويل الدعم عبر البريد إلى Conversations بدل ما تفضل الرسائل موزعة.</p></div><div class="card"><h5>📣 Social Inbox</h5><p>حسب القنوات والإصدار المتاح عندك، تقدر تجمع قنوات تواصل مختلفة داخل بيئة واحدة.</p></div></div></div>
+  <div class="section"><h3>Settings بتاعة الـ Inbox</h3><div class="steps"><div class="step"><b>ادخل Settings → Inboxes</b><span>اختار الـ Inbox أو اعمل Add Inbox.</span></div><div class="step"><b>راجع اسم الـ Inbox والإعدادات العامة</b><span>خلي الاسم واضح: Sales WhatsApp / Support Website وهكذا.</span></div><div class="step"><b>ضيف Collaborators</b><span>الموظفين اللي المفروض يشوفوا ويشتغلوا على الـ Inbox.</span></div><div class="step"><b>اضبط Business Hours</b><span>مثال تدريبي: 9 AM → 5 PM، حسب احتياج شركتك والمنطقة الزمنية.</span></div><div class="step"><b>جرّب Greeting / Auto-assignment / CSAT حسب المتاح</b><span>ما تفعّلش كل حاجة مرة واحدة في Production.</span></div></div><div class="callout warn"><b>⚠️ Business Hours مش معناها “اقفل القناة”</b><p>هي بتحدد ساعات العمل اللي تقدر تستخدمها للرسالة خارج أوقات الدوام، وبتأثر على حسابات مرتبطة بالعمل مثل SLA والتقارير بحسب الإعدادات.</p></div></div>
+  <div class="section"><h3>Widget Builder وPre-chat Form</h3><p class="lead">لو عندك Website Inbox، افتكر إن الودجت ده هو باب العميل. لازم يبقى بسيط ويجمع الحد الأدنى من البيانات المهمة.</p><div class="visual"><div class="visual-head"><span>🖼️ رسم توضيحي للـ Website Widget</span><span>Illustrative</span></div><div style="padding:22px;background:linear-gradient(145deg,#eaf0f4,#f8fbfc)"><div style="width:min(360px,100%);margin:0 auto;background:#fff;border:1px solid #dbe4e9;border-radius:18px;overflow:hidden;box-shadow:0 12px 28px rgba(20,40,60,.12)"><div style="padding:14px;background:#1c2940;color:#fff;font-weight:900">💬 محتاج مساعدة؟</div><div style="padding:16px"><div style="font-size:12px;color:#657589">قبل ما نبدأ، عرفنا بنفسك 👇</div><input placeholder="الاسم" style="width:100%;margin-top:10px;padding:9px;border:1px solid #dce4e9;border-radius:10px"><input placeholder="Email" style="width:100%;margin-top:8px;padding:9px;border:1px solid #dce4e9;border-radius:10px"><button style="width:100%;margin-top:10px;padding:10px;border:0;border-radius:10px;background:#1c2940;color:#fff;font-weight:900">ابدأ المحادثة</button></div></div></div><div class="visual-caption">استخدم الصورة كفكرة للمكونات، ثم وثّق الـ Widget الحقيقي من حسابك.</div></div></div>
+  <div class="section"><div class="lab"><div class="lab-head"><h4>🧪 Lab اليوم الثاني: Inbox مبيعات</h4><span class="pill">15–20 دقيقة</span></div><p class="task">اعمل Inbox تجريبي للمبيعات واضبطه كأنه لشركة عقارات أو أثاث.</p><div class="checklist"><label class="check"><input type="checkbox" data-progress><span>سميت الـ Inbox باسم واضح.</span></label><label class="check"><input type="checkbox" data-progress><span>ضفت Collaborators المناسبين.</span></label><label class="check"><input type="checkbox" data-progress><span>ضبطت Business Hours.</span></label><label class="check"><input type="checkbox" data-progress><span>كتبت Greeting واضح.</span></label><label class="check"><input type="checkbox" data-progress><span>اختبرت وصول Conversation للـ Inbox الصحيح.</span></label></div><div class="result">✅ Expected Result: تعرف العميل دخل منين، ودخل فين، ومين هيستلمه.</div></div></div>
+</section>
+
+<section class="day" id="day3" data-day="3" data-search="agents teams custom roles labels custom attributes contacts segments import audit logs account settings permissions">
+  <div class="day-head"><span class="day-badge">٣</span><div class="day-kicker">اليوم الثالث</div><h2 class="day-title">Agents وTeams وPermissions: مين يعمل إيه؟</h2><p class="day-intro">هنا بننتقل من استخدام Chatwoot إلى تصميم الشركة من الداخل. الهدف إنك تعرف تفصل الناس، الأدوار، البيانات، والـ access.</p><div class="story-link">↳ <b>القصة:</b> بعد ما الرسائل دخلت، لازم نحدد مين يمسكها ومين يشوفها.</div><div class="outcomes"><span class="pill">🧑‍💻 Agents</span><span class="pill">👥 Teams</span><span class="pill">🛡️ Roles</span><span class="pill">🏷️ Labels</span><span class="pill">🧩 Attributes</span><span class="pill">🏢 Accounts</span></div></div>
+  <div class="section"><h3>ابني الهيكل الأول</h3><div class="diagram"><div class="diagram-row"><div class="diagram-box">🏢 Account</div><div class="diagram-arrow">→</div><div class="diagram-box">👥 Teams</div><div class="diagram-arrow">→</div><div class="diagram-box">🧑‍💻 Agents</div></div></div><p class="lead" style="margin-top:12px">الـ <b>Account</b> هو مساحة الشركة. جوه الشركة عندك Teams، وجوه الـ Teams عندك Agents. مش لازم كل موظف يشوف كل حاجة.</p></div>
+  <div class="section"><h3>Agents vs Teams</h3><div class="grid"><div class="card"><h5>🧑‍💻 Agent</h5><p>موظف بيشتغل على المحادثات. مهم تعرف Role بتاعه وإيه الـ Inboxes اللي يشتغل عليها.</p><div class="mini">مثال: Ahmed — Agent — Sales Inbox.</div></div><div class="card"><h5>👥 Team</h5><p>مجموعة موظفين بتجمعهم وظيفة أو تخصص واحد.</p><div class="mini">مثال: Sales Team / Billing Team / Support Team.</div></div><div class="card"><h5>🛡️ Custom Role</h5><p>حسب الـ plan والنسخة المتاحة، ممكن تحتاج Role مخصص لصلاحيات أدق.</p></div><div class="card"><h5>🏷️ Label</h5><p>تصنيف تشغيلي. مثال: VIP، Price Inquiry، Complaint، Hot Lead.</p></div></div><div class="callout tip"><b>💡 الـ Label مش مجرد لون</b><p>أحسن Label هو اللي يدخل في قرار: Filter؟ Report؟ Routing؟ Automation؟ لو ملوش استخدام، ما تزودش Labels عالفاضي.</p></div></div>
+  <div class="section"><h3>Custom Attributes</h3><p class="lead">لما Labels ما تكفيش، استخدم بيانات منظمة. مثال:</p><div class="code"><span class="c">Contact Attributes</span>\nplan = Enterprise\ncity = Dubai\nlanguage = Arabic\n\n<span class="c">Conversation Attributes</span>\nlead_source = Meta Ads\nproject = DAMAC Island\nbudget = 1500000</div><p class="lead" style="margin-top:10px">المبدأ هنا: Label بتقول “التصنيف إيه؟”، بينما Attribute يقدر يحمل “القيمة إيه؟”.</p></div>
+  <div class="section"><h3>الصلاحيات بطريقة عملية</h3><div class="flow"><span class="node">Admin</span><span class="arrow">→</span><span class="node">Configuration</span><span class="arrow">→</span><span class="node">Teams</span><span class="arrow">→</span><span class="node">Agents</span><span class="arrow">→</span><span class="node">Conversations</span></div><div class="callout danger"><b>🛑 خطأ مبتدئ مشهور</b><p>إنك تدي كل الناس Admin علشان “يريّحك”. ده بيفتح باب تغييرات غلط في الـ Inboxes والAutomation والإعدادات. صمّم أقل صلاحية يحتاجها الشخص علشان يشتغل.</p></div></div>
+  <div class="section"><div class="lab"><div class="lab-head"><h4>🧪 Lab اليوم الثالث: شركة فيها 3 فرق</h4><span class="pill">20 دقيقة</span></div><p class="task">ابني هيكل تجريبي: Sales + Support + Billing. اعمل موظف لكل فريق وأضف 3 Custom Attributes.</p><div class="checklist"><label class="check"><input type="checkbox" data-progress><span>أنشأت Teams.</span></label><label class="check"><input type="checkbox" data-progress><span>أنشأت Agents وربطتهم بالفرق/الـ Inboxes المناسبة.</span></label><label class="check"><input type="checkbox" data-progress><span>أنشأت Labels: VIP / Price Inquiry / Complaint.</span></label><label class="check"><input type="checkbox" data-progress><span>أنشأت Custom Attributes للـ Project والـ Lead Source واللغة.</span></label></div><div class="result">✅ Expected Result: عندك Company Structure تقدر تبني عليه Routing وAutomation.</div></div></div>
+</section>
+
+<section class="day" id="day4" data-day="4" data-search="automation rules macros canned responses campaigns sla csat event conditions actions routing automation assignment priority loops">
+  <div class="day-head"><span class="day-badge">٤</span><div class="day-kicker">اليوم الرابع</div><h2 class="day-title">Automation: خَلّي Chatwoot يشتغل معاك</h2><p class="day-intro">دي أهم حصة في الجزء التشغيلي. هنا هنفك Automation Rule إلى ٣ أجزاء: Event + Conditions + Actions، ونعمل Routing حقيقي بدل Automation شكلها حلو بس.</p><div class="story-link">↳ <b>القصة:</b> لما الشغل يزيد، نخلي Chatwoot ينفذ القرارات المتكررة بدل الموظف.</div><div class="outcomes"><span class="pill">🤖 Rules</span><span class="pill">⚡ Macros</span><span class="pill">💬 Canned Responses</span><span class="pill">⏱️ SLA</span><span class="pill">⭐ CSAT</span></div></div>
+  <div class="section"><h3>يعني إيه Automation Rule؟</h3><p class="lead">خد القاعدة دي واحفظ منطقها، مش الكلمات:</p><div class="diagram"><div class="diagram-row"><div class="diagram-box">⏰ Event<br><small>إمتى؟</small></div><div class="diagram-arrow">→</div><div class="diagram-box">🔎 Conditions<br><small>على مين؟</small></div><div class="diagram-arrow">→</div><div class="diagram-box">⚙️ Actions<br><small>يعمل إيه؟</small></div></div></div><div class="code"><span class="c">// سيناريو تدريبي</span>\nEVENT: Conversation Created\nCONDITION: Message contains "سعر"\nACTION 1: Add Label = price_inquiry\nACTION 2: Assign Team = Sales\nACTION 3: Set Priority = High</div><div class="callout tip"><b>🧠 الطريقة الصح للتفكير</b><p>Event = إيه اللي شغّل القاعدة؟ Conditions = إمتى القاعدة تنطبق؟ Actions = نعمل إيه لما الشروط تتحقق؟ لو فهمت التلاتة، أنت فهمت قلب Automation.</p></div></div>
+  <div class="section"><h3>3 Rules لازم تتمرن عليهم</h3><div class="grid three"><div class="card"><h5>💰 Price Inquiry</h5><p>Conversation Created → message contains “سعر” → Label + Sales Team + High Priority.</p></div><div class="card"><h5>⭐ VIP</h5><p>Contact/Attribute مناسب → Label VIP + Team مخصص + أولوية أعلى.</p></div><div class="card"><h5>🧾 Billing</h5><p>كلمات زي invoice / refund / payment → Billing Team + billing label.</p></div></div><div class="callout warn"><b>⚠️ راقب الـ Loops</b><p>لو Rule بتعمل Action يولّد Event من نفس النوع اللي القاعدة بتراقبه، ممكن تدخل في loop. اختبر Rule على بيانات تجريبية، وخلي شروطك Tight ومحددة.</p></div></div>
+  <div class="section"><h3>Macros vs Canned Responses vs Automation</h3><div class="grid"><div class="card"><h5>⚡ Macro</h5><p>Action sequence يدوي. الموظف يضغط ويشغل كذا خطوة مع بعض.</p><div class="mini">“ضغطت Macro → Label + Assign + Status”.</div></div><div class="card"><h5>💬 Canned Response</h5><p>رد نصي جاهز لتوفير وقت الكتابة وتوحيد أسلوب الفريق.</p><div class="mini">مثال: /welcome</div></div><div class="card"><h5>🤖 Automation Rule</h5><p>Rule تلقائية مبنية على Event + Conditions + Actions.</p><div class="mini">“كل مرة يحصل X، اعمل Y”.</div></div></div></div>
+  <div class="section"><h3>Business Hours + SLA + CSAT</h3><p class="lead">دي مش 3 Features منفصلة في دماغك. شوف العلاقة:</p><div class="flow"><span class="node">Business Hours</span><span class="arrow">→</span><span class="node">Expected Availability</span><span class="arrow">→</span><span class="node">SLA Timing</span><span class="arrow">→</span><span class="node">Reports</span><span class="arrow">→</span><span class="node">CSAT</span></div><p class="lead" style="margin-top:11px">الفكرة العملية: الشركة تقول “هنرد في خلال 30 دقيقة وقت العمل”. الـ SLA يقيس. والـ Reports تقول حصل إيه. والـ CSAT يقول العميل حس بإيه.</p></div>
+  <div class="section"><div class="lab"><div class="lab-head"><h4>🧪 Lab اليوم الرابع: Rule من أولها لآخرها</h4><span class="pill">20–25 دقيقة</span></div><p class="task">اعمل Rule للاستفسار عن السعر. اختبرها برسالة فيها كلمة “سعر”، وشوف النتيجة داخل Conversation.</p><div class="checklist"><label class="check"><input type="checkbox" data-progress><span>حددّت Event.</span></label><label class="check"><input type="checkbox" data-progress><span>أضفت Condition على محتوى الرسالة.</span></label><label class="check"><input type="checkbox" data-progress><span>أضفت Label.</span></label><label class="check"><input type="checkbox" data-progress><span>عملت Assign للفريق.</span></label><label class="check"><input type="checkbox" data-progress><span>اختبرت Rule برسالة فعلية.</span></label></div><div class="result">✅ Expected Result: الاستفسار اتصنف واتوجّه من غير تدخل يدوي في كل خطوة.</div></div></div>
+</section>
+
+<section class="day" id="day5" data-day="5" data-search="reports overview conversations agents labels inboxes teams csat sla help center portal categories articles campaigns ongoing one off knowledge base">
+  <div class="day-head"><span class="day-badge">٥</span><div class="day-kicker">اليوم الخامس</div><h2 class="day-title">Reports وHelp Center: قِس وقلّل الأسئلة قبل ما توصل للموظف</h2><p class="day-intro">النهارده بنطلع من “التنفيذ” إلى “التحسين”. تعرف إيه اللي بيحصل، وإيه اللي بيتكرر، وإزاي تبني Help Center يخلي العميل يلاقي الإجابة بنفسه.</p><div class="story-link">↳ <b>القصة:</b> بعد ما فهمنا Automation داخل Chatwoot، نفتح الباب للأنظمة الخارجية.</div><div class="outcomes"><span class="pill">📊 Reports</span><span class="pill">⭐ CSAT</span><span class="pill">📚 Help Center</span><span class="pill">📣 Campaigns</span><span class="pill">🧠 Knowledge</span></div></div>
+  <div class="section"><h3>تقاريرك لازم تجاوب 5 أسئلة</h3><div class="grid three"><div class="card"><h5>1. كام Conversation؟</h5><p>حجم الضغط على الفريق.</p></div><div class="card"><h5>2. مين بيرد أسرع؟</h5><p>أداء الـ Agents.</p></div><div class="card"><h5>3. أكتر سبب للتواصل؟</h5><p>Labels / Topics.</p></div><div class="card"><h5>4. فين التأخير؟</h5><p>Response / Resolution / SLA.</p></div><div class="card"><h5>5. العميل راضي؟</h5><p>CSAT لو مفعّل.</p></div></div><div class="callout info"><b>📌 ما تبصش للـ Numbers من غير قرار</b><p>لو “Price Inquiry” هو أعلى Label، القرار مش إنك تحفظ الرقم. القرار: هل نكتب FAQ؟ نعمل Campaign؟ نجهز Canned Response؟ أو نربط AI يجاوب السؤال؟</p></div></div>
+  <div class="section"><h3>Help Center كجزء من Automation</h3><div class="diagram"><div class="diagram-row"><div class="diagram-box">❓ Customer Question</div><div class="diagram-arrow">→</div><div class="diagram-box">📚 Help Center</div><div class="diagram-arrow">→</div><div class="diagram-box">🤖 AI / Agent</div></div></div><p class="lead" style="margin-top:11px">كل سؤال متكرر ينفع يبقى Article. وكل Article كويس يقلل ضغط على الموظفين، ويجهزك بعدين لــ Knowledge Base يدخل فيها AI.</p><div class="grid"><div class="card"><h5>Portal</h5><p>الواجهة الأساسية للمقالات.</p></div><div class="card"><h5>Categories</h5><p>تجميع المقالات في أقسام مفهومة.</p></div><div class="card"><h5>Articles</h5><p>الإجابة التفصيلية للسؤال.</p></div><div class="card"><h5>Search</h5><p>خلي العميل يوصل للمعلومة بسرعة.</p></div></div></div>
+  <div class="section"><h3>Campaigns: استخدام استباقي</h3><p class="lead">Campaign مش “نبعت Spam”. هي طريقة توصل رسالة في السياق الصح. مثال: زائر على Pricing page، أو مجموعة Contacts عندها حالة معينة حسب الـ Campaign type والـ Channel المتاح في حسابك.</p><div class="code"><span class="c">Example idea</span>\nAudience: Visitors on Pricing page\nMessage: "حابب نساعدك تختار الباقة؟"\nGoal: Start Conversation\n\n<span class="c">One-off idea</span>\nAudience: Existing Contacts\nMessage: Update / Offer / Reminder</div></div>
+  <div class="section"><div class="lab"><div class="lab-head"><h4>🧪 Lab اليوم الخامس: Report → قرار</h4><span class="pill">15–20 دقيقة</span></div><p class="task">اختار Label متكرر من بياناتك أو اعمل بيانات تجريبية، وطلع منه قرار Automation أو Content.</p><div class="checklist"><label class="check"><input type="checkbox" data-progress><span>راجعت Report أو بيانات Conversations.</span></label><label class="check"><input type="checkbox" data-progress><span>حددّت Top 3 أسئلة/مواضيع.</span></label><label class="check"><input type="checkbox" data-progress><span>حوّلت سؤال متكرر إلى Help Center Article.</span></label><label class="check"><input type="checkbox" data-progress><span>اخترت Automation أو Canned Response مناسبة.</span></label></div><div class="result">✅ Expected Result: بقيت بتستخدم الـ Data لتحسين الـ System، مش مجرد بتتفرج على Reports.</div></div></div>
+</section>
+
+<section class="day" id="day6" data-day="6" data-search="integrations webhooks agent bots access token application api client api widget sdk platform api postman json payload events n8n">
+  <div class="day-head"><span class="day-badge">٦</span><div class="day-kicker">اليوم السادس</div><h2 class="day-title">API وWebhooks: خلّي Chatwoot يتكلم مع أي System</h2><p class="day-intro">هنا بنبدأ نخرج من Chatwoot لوحده. هتفهم Webhook، API، Access Token، Payload، Postman، والفرق بين “النظام بيبعتلك” و“أنت بتطلب من النظام”.</p><div class="story-link">↳ <b>القصة:</b> دلوقتي ندخل AI، لكن مع Routing وHandoff يحافظوا على دور الإنسان.</div><div class="outcomes"><span class="pill">🔔 Webhook</span><span class="pill">🔑 Access Token</span><span class="pill">📡 API</span><span class="pill">🧾 JSON</span><span class="pill">🧪 Postman</span></div></div>
+  <div class="section"><h3>Webhook vs API</h3><div class="grid"><div class="card"><h5>🔔 Webhook</h5><p><b>Chatwoot → Systemك</b>. حصل Event، فيبعت HTTP request إلى URL أنت محدده.</p><div class="mini">مثال: message_created → n8n Webhook.</div></div><div class="card"><h5>📡 API</h5><p><b>Systemك → Chatwoot</b>. أنت تبعت Request علشان تعمل أو تجيب حاجة.</p><div class="mini">مثال: n8n يرسل outgoing message.</div></div></div><div class="diagram"><div class="diagram-row"><div class="diagram-box">💬 Chatwoot Event</div><div class="diagram-arrow">→</div><div class="diagram-box">🔔 Webhook URL</div><div class="diagram-arrow">→</div><div class="diagram-box">⚙️ n8n</div></div><div style="height:12px"></div><div class="diagram-row"><div class="diagram-box">🤖 AI / Logic</div><div class="diagram-arrow">→</div><div class="diagram-box">📡 API Request</div><div class="diagram-arrow">→</div><div class="diagram-box">💬 Chatwoot</div></div></div></div>
+  <div class="section"><h3>Payload تفهمه مش تحفظه</h3><p class="lead">كل Webhook بيجيب معاه بيانات. أهم مهارة إنك تبص على الـ JSON وتعرف تستخرج اللي محتاجه.</p><div class="code"><span class="c">// مثال تعليمي مبسط، راجع payload الفعلي في حسابك/إصدارك</span>\n{\n  <span class="k">"event"</span>: <span class="s">"message_created"</span>,\n  <span class="k">"conversation"</span>: {\n    <span class="k">"id"</span>: 123\n  },\n  <span class="k">"message_type"</span>: <span class="s">"incoming"</span>,\n  <span class="k">"content"</span>: <span class="s">"عايز أعرف السعر"</span>\n}</div><div class="grid three"><div class="card"><h5>event</h5><p>اسم الحدث اللي حصل.</p></div><div class="card"><h5>conversation.id</h5><p>المحادثة اللي حصل فيها الحدث.</p></div><div class="card"><h5>message_type</h5><p>نوع الرسالة.</p></div><div class="card"><h5>content</h5><p>محتوى الرسالة.</p></div><div class="card"><h5>sender</h5><p>مين بعت حسب الـ payload المتاح.</p></div><div class="card"><h5>account / inbox</h5><p>السياق اللي حصل فيه الـ Event.</p></div></div></div>
+  <div class="section"><h3>API عمليًا بـ Postman</h3><div class="steps"><div class="step"><b>جيب Access Token</b><span>التوكن يمثل صلاحيات الحساب/المستخدم حسب طريقة الاستخدام.</span></div><div class="step"><b>حدد Endpoint</b><span>اختار العملية اللي عايز تعملها من Application API.</span></div><div class="step"><b>جهّز Headers</b><span>Auth + Content-Type حسب الـ endpoint.</span></div><div class="step"><b>جهّز Body بصيغة JSON</b><span>حط الرسالة أو البيانات المطلوبة.</span></div><div class="step"><b>Send ثم اقرأ Response</b><span>ما تعتبرش الـ Request نجح إلا لما تفهم الـ Response والـ Status Code.</span></div></div><div class="code"><span class="c">// هيكل تدريبي عام</span>\nPOST /api/.../conversations/.../messages\nHeaders:\n  api_access_token: YOUR_TOKEN\n  Content-Type: application/json\n\nBody:\n{\n  "content": "Hello",\n  "message_type": "outgoing"\n}</div><div class="callout warn"><b>⚠️ مهم</b><p>المسار الدقيق للـ endpoint والـ parameters لازم تتأكد منه من API Reference الخاصة بنسخة Chatwoot اللي شغال عليها. الكود هنا تعليمي لتفهم شكل العملية، مش بديل عن الـ official docs.</p></div></div>
+  <div class="section"><h3>Agent Bots وAI</h3><p class="lead">تقدر تربط منطق AI خارجي أو Bot بالـ Inbox. هنا لازم تكون فاهم إن “AI” مش زرار سحري؛ هو workflow: يستقبل Event → يفهم الحالة → يقرر → يرد أو يعمل Handoff.</p><div class="flow"><span class="node">Incoming Message</span><span class="arrow">→</span><span class="node">Bot / AI</span><span class="arrow">→</span><span class="node">Decision</span><span class="arrow">→</span><span class="node">Reply / Handoff</span></div></div>
+  <div class="section"><div class="lab"><div class="lab-head"><h4>🧪 Lab اليوم السادس: Webhook + Postman</h4><span class="pill">25 دقيقة</span></div><p class="task">اعمل Webhook تجريبي وراقب Event، وبعدها جرّب Request من Postman على بيئة اختبار.</p><div class="checklist"><label class="check"><input type="checkbox" data-progress><span>أنشأت Webhook URL.</span></label><label class="check"><input type="checkbox" data-progress><span>اختارت Event مناسب مثل message_created.</span></label><label class="check"><input type="checkbox" data-progress><span>استقبلت JSON Payload وقرأته.</span></label><label class="check"><input type="checkbox" data-progress><span>عرّفت conversation.id وcontent داخل Payload.</span></label><label class="check"><input type="checkbox" data-progress><span>نفذت Request من Postman وفهمت الـ Response.</span></label></div><div class="result">✅ Expected Result: تقدر تتكلم مع Chatwoot عبر HTTP بدل ما كل شغلك يبقى داخل الواجهة.</div></div></div>
+</section>
+
+<section class="day" id="day7" data-day="7" data-search="n8n ai agent handoff knowledge base multi tenant account switcher super admin company tenant webhook http request session id conversation id production backup https monitoring docker pg dump">
+  <div class="day-head"><span class="day-badge">٧</span><div class="day-kicker">اليوم السابع</div><h2 class="day-title">n8n + AI + Multi-Company + Production</h2><p class="day-intro">آخر يوم بنجمع كل اللي فات. هنا مش بنتعلم Feature جديدة بس، هنا بنركّب System. الهدف: شركة → Chatwoot → n8n → AI → Human Handoff → Data → Production.</p><div class="story-link">↳ <b>القصة:</b> آخر قطعة: نكبر النظام لأكثر من شركة ونحطه في Production بشكل آمن.</div><div class="outcomes"><span class="pill">⚙️ n8n</span><span class="pill">🤖 AI</span><span class="pill">🙋 Handoff</span><span class="pill">🏢 Multi-Tenant</span><span class="pill">💾 Backup</span><span class="pill">🛡️ Production</span></div></div>
+  <div class="section"><h3>Architecture المشروع</h3><div class="diagram"><div class="diagram-row"><div class="diagram-box">📱 WhatsApp<br>🌐 Website<br>📣 Social</div><div class="diagram-arrow">→</div><div class="diagram-box">💬 Chatwoot<br><small>Inbox + Conversations</small></div><div class="diagram-arrow">→</div><div class="diagram-box">🔔 Webhook<br><small>Events</small></div></div><div style="height:12px"></div><div class="diagram-row"><div class="diagram-box">⚙️ n8n<br><small>Routing</small></div><div class="diagram-arrow">→</div><div class="diagram-box">🧠 AI Agent<br><small>Knowledge</small></div><div class="diagram-arrow">→</div><div class="diagram-box">🙋 Human Handoff<br><small>Sales / Support</small></div></div></div></div>
+  <div class="section"><h3>Workflow بالتفصيل</h3><div class="steps"><div class="step"><b>1. Customer sends message</b><span>رسالة: “عايز سعر المشروع”.</span></div><div class="step"><b>2. Chatwoot receives it</b><span>Conversation موجودة في Inbox.</span></div><div class="step"><b>3. Webhook يطلع Event</b><span>n8n تستقبل الـ payload.</span></div><div class="step"><b>4. n8n تعمل Routing</b><span>تقرأ account / inbox / message / attributes وتقرر المسار.</span></div><div class="step"><b>5. AI Agent يفهم</b><span>يستخدم Knowledge Base أو Logic مناسب.</span></div><div class="step"><b>6. قرار: Answer أو Handoff</b><span>لو سؤال بسيط → Reply. لو محتاج بشر → Handoff.</span></div><div class="step"><b>7. n8n يكتب النتيجة في Chatwoot</b><span>بـ API Request أو الـ integration المناسب.</span></div><div class="step"><b>8. سجل وراقب</b><span>Logs + status + labels + CRM/Sheets عند الحاجة.</span></div></div></div>
+  <div class="section"><h3>Handoff من AI للموظف 🙋</h3><p class="lead">أهم حاجة في الـ AI Support مش إنه يرد 100% لوحده. أهم حاجة يعرف <b>إمتى ما ينفعش يكمّل</b>.</p><div class="code"><span class="c">// مثال Logic تعليمي</span>\nIF customer_requests_human == true\nOR confidence &lt; threshold\nOR issue_is_sensitive == true\nTHEN\n  add_label("human_handoff")\n  assign_team("Support")\n  add_private_note("AI handed off with context")\n  set_status("open")</div><div class="callout tip"><b>🎯 قاعدة ذهبية</b><p>الـ AI الجيد مش اللي بيجاوب على كل حاجة. الجيد هو اللي يعرف حدوده، ويسلّم الحالة للبشر من غير ما العميل يبدأ الحكاية من الصفر.</p></div></div>
+  <div class="section"><h3>Multi-Company Architecture 🏢</h3><p class="lead">لو هتبيع النظام لأكثر من شركة، ما تبنيش workflow مفروض على الجميع. خليه يقرأ <b>Account Context</b> ويمرر الطلب للـ configuration المناسبة.</p><div class="diagram"><div class="diagram-row"><div class="diagram-box">🛠️ Super Admin</div><div class="diagram-arrow">→</div><div class="diagram-box">🏢 Company A</div><div class="diagram-arrow">↔</div><div class="diagram-box">⚙️ Company Config</div></div><div style="height:12px"></div><div class="diagram-row"><div class="diagram-box">🏢 Company B</div><div class="diagram-arrow">→</div><div class="diagram-box">🗂️ Credentials / Routing</div><div class="diagram-arrow">→</div><div class="diagram-box">🤖 Same Workflow</div></div></div><p class="lead" style="margin-top:10px">فكرة الـ Multi-Tenant: Workflow واحد ممكن يتعامل مع شركات مختلفة، لكن كل شركة لها بياناتها وقنواتها وموظفيها وقواعدها. التصميم النهائي لازم يمنع تسريب أو خلط بيانات الشركات.</p></div>
+  <div class="section"><h3>Session ID وMemory</h3><p class="lead">لو الـ AI محتاج Memory، اربط الـ session بالسياق الصحيح. مثال شائع في نظام محادثات:</p><div class="code">Session ID = conversation.id\n\n<span class="c">// النتيجة</span>\nكل Conversation ليها سياق منفصل\nما تخلطش ذاكرة عميل مع عميل تاني</div><div class="callout danger"><b>🛡️ Security First</b><p>ما تحطش API tokens أو secrets داخل الـ frontend أو في GitHub. خزنها في Credentials/Environment Secrets حسب البنية اللي شغال بها.</p></div></div>
+  <div class="section"><h3>Production Checklist ✅</h3><div class="grid"><div class="card"><h5>🔒 HTTPS</h5><p>Webhook وواجهاتك الإنتاجية لازم تستخدم قناة آمنة.</p></div><div class="card"><h5>💾 Backup</h5><p>اعمل Backup دوري للبيانات والإعدادات الحيوية.</p></div><div class="card"><h5>📈 Monitoring</h5><p>تابع errors وworkflow failures والـ queue/health حسب الـ stack.</p></div><div class="card"><h5>🧪 Staging</h5><p>اختبر تحديثات Chatwoot / n8n في بيئة اختبار قبل Production.</p></div><div class="card"><h5>🔑 Secrets</h5><p>Tokens وAPI keys خارج الكود.</p></div><div class="card"><h5>🧾 Logs</h5><p>احتفظ بسجل يساعدك تعرف: دخل إيه؟ عمل إيه؟ فشل فين؟</p></div></div><div class="code"><span class="c">// مثال لفكرة Backup على PostgreSQL</span>\npg_dump YOUR_DATABASE &gt; backup.sql\n\n<span class="c">// الفكرة مش الأمر نفسه فقط</span>\nBackup → Store safely → Test restore → Repeat</div></div>
+  <div class="section"><div class="lab"><div class="lab-head"><h4>🧪 Lab اليوم السابع: البوت اللي هنبيع بيه</h4><span class="pill">45–60 دقيقة</span></div><p class="task">ابني نسخة Demo: شركتين + Inbox + Webhook + n8n + AI + Handoff. خلي نفس الـ workflow يستقبل Account Context مختلف.</p><div class="checklist"><label class="check"><input type="checkbox" data-progress><span>عندي شركتين/Accounts تجريبيين.</span></label><label class="check"><input type="checkbox" data-progress><span>كل شركة لها Inbox/Team مختلف.</span></label><label class="check"><input type="checkbox" data-progress><span>Chatwoot يرسل Webhook إلى n8n.</span></label><label class="check"><input type="checkbox" data-progress><span>n8n يعمل Routing بناءً على الـ context.</span></label><label class="check"><input type="checkbox" data-progress><span>AI يجاوب على سؤال بسيط.</span></label><label class="check"><input type="checkbox" data-progress><span>AI يسلّم للبشر عند الحاجة.</span></label><label class="check"><input type="checkbox" data-progress><span>عندك Backup + Logs + Secrets خارج الكود.</span></label></div><div class="result">✅ Expected Result: Demo تقدر تشرحها في Interview أو تعرضها لعميل بدل ما تقول “أنا بعرف Chatwoot”.</div></div></div>
+</section>
+
+<section class="day" id="graduation" data-search="graduation project capstone شركتين بوت واحد backup daily portfolio interview client demo architecture">
+  <div class="day-head"><span class="day-badge">🎓</span><div class="day-kicker">مشروع التخرج</div><h2 class="day-title">شركة عقارات + Chatwoot + AI + n8n</h2><p class="day-intro">هنا بنحوّل الـ ٧ أيام إلى Project واحد. خليه Demo نظيف وتعرف تشرحه في 5 دقائق، لأن المشروع أهم من عدد الـ Features اللي حفظتها.</p><div class="outcomes"><span class="pill">🏢 2 Companies</span><span class="pill">📲 WhatsApp</span><span class="pill">🤖 AI</span><span class="pill">📅 Booking</span><span class="pill">📊 Reporting</span><span class="pill">🛡️ Production</span></div></div>
+  <div class="section"><h3>المطلوب النهائي</h3><div class="grid three"><div class="card"><h5>Company A</h5><p>Real Estate Sales.</p></div><div class="card"><h5>Company B</h5><p>Furniture Support.</p></div><div class="card"><h5>Shared n8n</h5><p>Workflow واحد مع routing.</p></div><div class="card"><h5>AI Agent</h5><p>Question answering + handoff.</p></div><div class="card"><h5>Human Team</h5><p>Sales / Support / Billing.</p></div><div class="card"><h5>Backup</h5><p>Daily backup + restore test.</p></div></div></div>
+  <div class="section"><h3>سيناريو العرض قدام عميل 💼</h3><div class="steps"><div class="step"><b>“العميل بعت من واتساب”</b><span>أوري الرسالة دخلت Chatwoot.</span></div><div class="step"><b>“النظام فهم السؤال”</b><span>أوري الـ Webhook ثم n8n ثم AI.</span></div><div class="step"><b>“هنا السؤال محتاج موظف”</b><span>أوري Handoff والـ Assign والـ Label.</span></div><div class="step"><b>“وده تقرير الأداء”</b><span>أوري Reports أو الـ Dashboard المناسب.</span></div><div class="step"><b>“وده أمان النظام”</b><span>أوري Secrets وBackup وLogs على مستوى الـ Architecture.</span></div></div></div>
+  <div class="section"><h3>🎤 سكريبت 60 ثانية تعرف بيه المشروع</h3><div class="code" style="direction:rtl;text-align:right;font-family:Tahoma,Arial,sans-serif">أنا بنيت Customer Service Automation System باستخدام Chatwoot وn8n وAI.\nالعميل بيدخل من الـ WhatsApp أو Website، المحادثة بتوصل لـ Chatwoot، وبعدها Webhook يبعت الـ event لـ n8n.\nالـ workflow بيحدد الشركة والـ context، والـ AI يجاوب من الـ Knowledge Base أو يعمل Handoff للموظف لو الحالة محتاجة تدخل بشري.\nوالنظام عنده routing وlabels وteams وlogging وbackup، فمش مجرد Bot بيرد، ده Support System كامل قابل للتوسع.</div></div>
+  <div class="section"><h3>🏁 قبل ما تقول “أنا خلصت”</h3><div class="checklist"><label class="check"><input type="checkbox" data-progress><span>أقدر أشرح Conversation Lifecycle من غير ما أفتح Chatwoot.</span></label><label class="check"><input type="checkbox" data-progress><span>أقدر أفرق بين Channel وInbox وContact وConversation.</span></label><label class="check"><input type="checkbox" data-progress><span>أقدر أبني Automation Rule من Event + Conditions + Actions.</span></label><label class="check"><input type="checkbox" data-progress><span>أفهم Webhook Payload وأعرف أقرأ JSON.</span></label><label class="check"><input type="checkbox" data-progress><span>أقدر أربط Chatwoot بـ n8n.</span></label><label class="check"><input type="checkbox" data-progress><span>أعرف أعمل Handoff من AI للبشر.</span></label><label class="check"><input type="checkbox" data-progress><span>أفهم Multi-Company Architecture ومشكلة فصل البيانات.</span></label><label class="check"><input type="checkbox" data-progress><span>عندي Demo أقدر أعرضه في Interview أو Client Call.</span></label></div><div class="callout tip"><b>🔥 نقطة التحول</b><p>لو بقيت تعرف تبني وتشرح وتكتشف الغلط، ساعتها أنت ما عدتش مجرد User للـ Chatwoot. أنت بدأت تفكر كـ Automation Builder.</p></div></div>
+</section>
+
+</main>
+
+<footer class="container">
+  <h2>خلصت الكورس؟ 🚀</h2>
+  <p>ما توقفش عند “أنا فاهم”. خُد مشروع التخرج، صوّر الـ workflow، اعمل فيديو Demo مدته 3–5 دقائق، وحطه في Portfolio بتاعك. الهدف إن المهارة تتحول إلى دليل شغل.</p>
+  <div class="sources">
+    <a href="https://www.chatwoot.com/hc/user-guide/en" target="_blank" rel="noreferrer">📚 Chatwoot User Guide</a>
+    <a href="https://www.chatwoot.com/hc/user-guide/articles/1677693021-how-to-use-webhooks" target="_blank" rel="noreferrer">🔔 Webhooks Guide</a>
+    <a href="https://www.chatwoot.com/hc/user-guide/articles/1677238266-lesson-4-complete-your-customer-engagement-suite" target="_blank" rel="noreferrer">🤖 Automation & Routing</a>
+    <a href="https://app.chatwoot.com/hc/user-guide/articles/1677492191-adding-inboxes" target="_blank" rel="noreferrer">📥 Inboxes</a>
+  </div>
+</footer>
+
 <script>
-var SB=["💬 Conversations","👥 Contacts","📊 Reports","📣 Campaigns","📚 Help Center","⚙️ Settings","🔔 Notifications","🙂 Avatar"];
-var D=[
-["الـ Sidebar والواجهة كلها","الـ Sidebar هو خريطة Chatwoot، وكل حاجة هتستخدمها بتبدأ منه.",[
-"💬 Conversations|الشاشة الرئيسية للشغل|بتعرض كل المحادثات في 3 أعمدة: القايمة، الشات، وبيانات العميل|اختار تبويب Mine أو Unassigned أو All، وافتح محادثة وردّ",
-"@ Mentions وUnattended|فلترين جاهزين تحت Conversations|Mentions فيها المحادثات اللي زميل عملك @ فيها، وUnattended فيها اللي لسه مفيهاش رد|ابدأ بـ Unattended عشان مفيش عميل يتنسي",
-"📁 Folders وTeams وInboxes وLabels|اختصارات في الـ Sidebar|بتفلتر القايمة على فريق أو قناة أو تصنيف أو Folder محفوظ|اضغط على الاسم وهتشوف محادثاته بس",
-"👥 Contacts|قاعدة بيانات العملاء|بتحفظ الاسم والرقم والإيميل وكل محادثاته|ابحث بالاسم أو الرقم، أو اعمل فلتر واحفظه Segment",
-"📊 Reports|لوحة الأرقام|بتقيس سرعة الرد وعدد المحادثات ورضا العملاء|اختار الفترة وادخل على Overview ثم Agents",
-"📣 Campaigns|رسايل استباقية|Ongoing بتظهر لزوار الموقع، وOne-off رسالة لقايمة عملاء|اختار Inbox والرسالة والجمهور ثم Save",
-"📚 Help Center|موقع مقالات للمساعدة|بيقلل الأسئلة المتكررة لأن العميل بيلاقي الإجابة لوحده|اعمل Portal ثم Categories ثم Article",
-"⚙️ Settings|كل إعدادات الشركة (للـ Admin)|منه بتدير Agents وInboxes وAutomation وIntegrations|هنفصّله في الأيام 3 و4 و5 و6",
-"🔔 Notifications|جرس الإشعارات|بيبلّغك بالمنشن والإسناد والرسايل الجديدة|اضغط عليه، وظبط الأنواع من Profile Settings",
-"🙂 Avatar (حسابك)|قايمة الحساب أسفل الـ Sidebar|فيها حالتك Online/Busy/Offline وProfile Settings والاختصارات وAppearance وتبديل الـ Account|اضغط على صورتك وخلي حالتك Online قبل ما تبدأ"],
-"مثال: تفتح الصبح ثم تخلي حالتك Online ثم تدخل Unattended ثم ترد ثم تقفل المحادثة بـ Resolve.",
-["🙂 Online","📬 Unattended","✍️ رد","✅ Resolve"],"افتح كل عنصر في الـ Sidebar واكتب سطر عن وظيفته."],
-["المحادثة من جوه","الشات هو قلب Chatwoot، فاتقنه قبل أي حاجة تانية.",[
-"🔖 Status|حالة المحادثة|Open شغالة، Pending مستنية، Snoozed مؤجلة، Resolved اتقفلت|غيّرها من زرار Resolve فوق الشات",
-"🔎 Filters وFolders|فلتر متقدم على القايمة|تجمع شروط زي Inbox = واتساب وLabel = VIP|أيقونة الفلتر ثم Add filter ثم Apply، وSave تحفظه Folder",
-"✍️ Reply وPrivate Note|تبويبين في خانة الكتابة|Reply بيوصل للعميل، وPrivate Note للفريق بس|بدّل التبويب قبل الإرسال، والـ Note لونها أصفر",
-"🧰 أدوات الكتابة|أزرار تحت الخانة|Emoji وAttachments وVoice وSignature وCanned Responses|اكتب / للردود الجاهزة و@ لمنشن زميل",
-"🧑 Contact Panel|عمود بيانات العميل|فيه Assignee وTeam وPriority وLabels وParticipants وContact Attributes والمحادثات السابقة|حدد الموظف والفريق والـ Label من هنا",
-"🪄 Macros|إجراءات كتير بضغطة|بتنفذ أكتر من خطوة مرة واحدة|اختار Macro من الـ Panel ثم Execute",
-"⏰ Snooze وMute|تأجيل وكتم|Snooze يخفي المحادثة لوقت محدد، وMute يوقف إشعاراتها|من أيقونة ⋯ جنب Resolve",
-"📧 Transcript وMerge|نسخة الشات ودمج العملاء|Transcript يبعت الشات إيميل، وMerge يدمج عميلين هما نفس الشخص|من ⋯ للـ Transcript ومن صفحة Contact للـ Merge"],
-"مثال: عميل VIP بيسأل عن فاتورة ثم Private Note للمحاسب بـ @ ثم Assign لفريق Billing ثم Snooze لبكرة.",
-["📩 رسالة","🏷️ Label","📝 Note + @","👥 Assign","⏰ Snooze"],"جرّب Note وMention وSnooze وFolder محفوظ على محادثة تجريبية."],
-["الـ Inboxes من جوه","كل Inbox ليه تبويبات، وكل تبويب بيتحكم في حاجة مختلفة.",[
-"📥 Settings ثم Inboxes|قايمة قنواتك|بتضيف وتعدّل وتمسح قنوات التواصل|Add Inbox ثم اختار القناة",
-"⚙️ تبويب Settings|الإعدادات العامة للـ Inbox|الاسم وGreeting وAuto-assignment وCSAT والرد بعد الـ Resolve|فعّل اللي محتاجه وSave",
-"👥 Collaborators|مين يشوف الـ Inbox|الموظف مبيشوفش غير الـ Inboxes المتضاف عليها|ضيف أو شيل الموظفين",
-"🕘 Business Hours|ساعات الدوام|بتبعت رسالة خارج الدوام وبتحسب الـ SLA صح|فعّلها وحدد الأيام والتوقيت والرسالة",
-"📝 Pre Chat Form|نموذج قبل الشات (Website)|بيجمع الاسم والإيميل قبل ما يبدأ العميل|فعّله وحدد الحقول المطلوبة",
-"🎨 Widget Builder|تصميم الودجت|اللون والموضع ورسالة الترحيب|عدّل وشوف المعاينة",
-"🔧 Configuration|بيانات الربط|فيه الـ Script وWebhook URL وTokens حسب القناة|انسخ منه وحطه في Meta أو موقعك",
-"📲 قنوات الربط|Website وWhatsApp وFacebook وInstagram وTelegram وEmail وAPI|لكل قناة خطوات ربط مختلفة|الخطوات كاملة في نوشن حصة ٢"],
-"مثال: Inbox واتساب المبيعات: Auto-assignment شغال، Business Hours من 9 لـ 5، وCSAT مفعّل.",
-["🔗 Add Inbox","⚙️ Settings","👥 Collaborators","🕘 Hours","✅ تجربة"],"اعمل Inbox Website كامل بكل التبويبات وجرّب رسالة خارج الدوام."],
-["الناس والتنظيم","هنا بتبني هيكل شركتك: مين يعمل إيه وبيشوف إيه.",[
-"🧑‍💻 Agents|موظفينك|بتضيف وتحدد الدور (Administrator أو Agent) وتحذف|Settings ثم Agents ثم Add Agent",
-"🛡️ Custom Roles|أدوار مخصصة (Enterprise)|بتتحكم في صلاحيات دقيقة زي Supervisor|Settings ثم Custom Roles ثم Add",
-"👥 Teams|مجموعات موظفين|بتسند لفريق وتعمل عليه Automation وتقارير|اعمل Team وضيف أعضاءه",
-"🏷️ Labels|تصنيفات|بتجمّع المحادثات بموضوع أو حالة وبتظهر في الـ Sidebar|اعمل Label بلون وفعّل Show in sidebar",
-"🧩 Custom Attributes|حقول إضافية|على Contact أو Conversation: Text وNumber وDate وList وCheckbox وLink|Settings ثم Custom Attributes ثم Add",
-"📇 Contacts: Segments وImport|إدارة العملاء|فلتر محفوظ واستيراد CSV وNotes وMerge|من Contacts استخدم الفلتر وImport",
-"🧾 Audit Logs|سجل العمليات (Enterprise)|بيسجل مين غيّر إيه ومتى|Settings ثم Audit Logs",
-"🏢 Account Settings|إعدادات الشركة|الاسم واللغة وAuto-resolve وتفعيل الميزات|Settings ثم Account Settings"],
-"مثال: Sales Team فيها 3 Agents، وSupervisor بـ Custom Role، والـ Label «VIP» بيتحط أوتوماتيك.",
-["🧑‍💻 Agent","👥 Team","🏷️ Label","🧩 Attribute","📊 تقرير"],"ابني هيكل شركتك: Teams وAgents وLabels و3 Custom Attributes."],
-["الأتمتة والإنتاجية والتقارير","اللي بيتكرر، خلّي Chatwoot يعمله، وقيس النتيجة بالأرقام.",[
-"🤖 Automation Rules|قواعد بتتنفذ لوحدها|Event + Conditions + Actions|Settings ثم Automation ثم Add Rule",
-"⚡ Macros|سلسلة إجراءات بضغطة|الموظف بيشغّلها يدوي|Settings ثم Macros ثم Add",
-"💬 Canned Responses|ردود جاهزة|بتوفر وقت الكتابة وبتوحّد الأسلوب|اعمل Short code ثم اكتب / في الشات",
-"📣 Campaigns|رسايل استباقية|Ongoing لزوار الموقع وOne-off لقايمة|اختار Inbox والجمهور والتوقيت",
-"📊 Reports|لوحة الأداء|Overview وConversations وAgents وLabels وInboxes وTeams وCSAT وSLA|اختار الفترة وصدّر CSV",
-"⏱️ SLA (Enterprise)|اتفاقية مستوى الخدمة|وقت أقصى لأول رد وللرد التالي وللحل|Settings ثم SLA ثم Add Policy",
-"⭐ CSAT|استبيان رضا|بيتبعت بعد Resolve|فعّله من إعدادات الـ Inbox وشوف النتايج في Reports",
-"📚 Help Center|بوابة مقالات|Portals وCategories وArticles ودومين خاص|Help Center ثم New Portal"],
-"مثال: Rule: لو الرسالة فيها «سعر» ثم Label «استفسار-سعر» ثم Assign لـ Sales ثم Priority عالية.",
-["📩 Event","🔎 Conditions","🏷️ Label","👥 Assign","⭐ CSAT"],"اعمل 3 Rules وMacro و5 Canned وCampaign على الموقع."],
-["الـ Integrations والـ API","هنا Chatwoot بيتكلم مع باقي أنظمتك.",[
-"🧩 Integrations|تكاملات جاهزة|Slack وDialogflow وLinear وShopify وGoogle Translate وOpenAI حسب الإصدار|Settings ثم Integrations ثم Configure",
-"🔔 Webhooks|إشعار لنظام خارجي|بيبعت الأحداث زي message_created لـ URL|Integrations ثم Webhooks ثم Add وحدد الأحداث",
-"🖼️ Dashboard Apps|صفحة خارجية جوه Chatwoot|بتعرض بيانات من نظامك جنب المحادثة|Integrations ثم Dashboard Apps",
-"🤖 Agent Bots|موظف آلي|بيشتغل على الـ Pending وبيسلّم للبشر|Settings ثم Bots ثم Add واربطه بـ Inbox",
-"🔑 Access Token|مفتاح الـ API|بيمثل صلاحيات المستخدم|Profile Settings ثم Access Token",
-"📡 Application API|التحكم في الـ Account|رسايل ومحادثات وعملاء وLabels|Header اسمه api_access_token",
-"🌐 Client API وWidget SDK|للواجهات الخاصة|الـ SDK فيه setUser وsetLabel وtoggle|استخدم window.$chatwoot من الـ Script",
-"🛠️ Platform API|إدارة Accounts وUsers|بتعمل شركات تلقائي|Platform App من Super Admin"],
-"مثال: Webhook على conversation_created بيبعت لـ n8n اللي بيسجّل العميل في Google Sheets.",
-["💬 حدث","🔔 Webhook","⚙️ n8n","📤 API","✅ تنفيذ"],"اعمل Webhook وAgent Bot وجرّب طلب API من Postman."],
-["أكتر من شركة + n8n + الإنتاج","آخر يوم: كل اللي اتعلمته بيتجمع في نظام واحد.",[
-"🔀 Account Switcher|تبديل الشركة|بيظهر لو عندك أكتر من Account|من أعلى الـ Sidebar",
-"🛠️ Super Admin|مدير السيرفر|بيعمل Accounts وUsers ويضبط الـ Installation|المسار super_admin",
-"🏢 Account لكل شركة|Tenant مستقل|داتا وقنوات وموظفين منفصلين|Super Admin ثم Accounts ثم New",
-"⚙️ n8n Webhook Node|بيستقبل أحداث Chatwoot|Method POST والـ Production URL|حط الرابط في Webhooks",
-"📤 n8n HTTP Request|بيرد بالـ API|POST على conversations/ID/messages|Header Auth باسم api_access_token",
-"🧠 AI Agent|ذكاء اصطناعي بذاكرة|Session ID = conversation.id|اربطه بـ Knowledge Base",
-"🙋 Handoff|تسليم لموظف|Note ثم Label ثم Assign ثم status = open|بعد فلترة message_type = incoming",
-"🛡️ Production|تشغيل آمن|Backup وHTTPS وMonitoring وتحديث بحذر|pg_dump يومي وdocker compose pull"],
-"مثال: Workflow واحد يقرا account.id ويسحب Token الشركة من جدول ويرد بالـ AI من Knowledge Base بتاعتها.",
-["🌐 Webhook","🗂️ جدول الشركات","🤖 AI","🙋 Handoff","💾 Backup"],"مشروع التخرج: شركتين وبوت واحد وBackup يومي."]];
-function kash(w){if(!/[\u0600-\u06FF]/.test(w)||/[A-Za-z0-9]/.test(w)||w.length<3)return w;var nc="اأإآدذرزوؤةءى",ok=function(i){return nc.indexOf(w[i])<0&&!/[\u064B-\u065F]/.test(w[i])&&!/[\u064B-\u065F]/.test(w[i+1]||"")};for(var i=Math.ceil(w.length/2)-1;i>=1;i--)if(ok(i))return w.slice(0,i+1)+"ـــ"+w.slice(i+1);return w}
-function lines(t){if(t.indexOf("|")>=0)return t.split("|");var w=t.replace(/[\u{1F000}-\u{1FFFF}\u2600-\u27BF\uFE0F\u200D]/gu,"").split(/\s+/).filter(function(x){return /[\w\u0600-\u06FF]/.test(x)});return w.length>3?[w[0],w[1],w.slice(2).join(" ")]:w}
-function arc(a){var N=a.length,o='<svg viewBox="0 0 1000 580" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M30 330 Q500 120 970 330"/></svg><b class="sp" style="top:9%;right:6%">✦</b><b class="sp" style="top:30%;left:3%;animation-delay:1s">✦</b>';
-a.forEach(function(s,k){var t=1-(.07+.86*k/(N-1)),u=1-t,x=u*u*30+2*u*t*500+t*t*970,y=u*u*330+2*u*t*120+t*t*330,L=lines(s),m=Math.max.apply(0,L.map(function(z){return z.length})),st='left:'+x/10+'%;top:'+y/5.8+'%;--i:'+k;
-o+='<i class="dot" style="'+st+'"></i><div class="cap" style="'+st+';font-size:'+(m>9?2.3:2.9)+'cqw"><b>0'+(k+1)+'</b><small>مرحلة</small>'+L.map(kash).join('<br>')+'</div>'});return o}
-var A="١٢٣٤٥٦٧",L=["إيه هو؟","بيعمل إيه؟","إزاي تستخدمه؟"],nv="",h="";
-D.forEach(function(d,i){
- nv+='<a href="#d'+i+'">'+A[i]+'</a>';
- h+='<section class="frame" id="d'+i+'"><div class="dh r"><span class="dn">'+A[i]+'</span><div><small>اليوم '+A[i]+'</small><h2>'+d[0]+'</h2></div></div><div class="note r"><span class="tape t1"></span><span class="tape t2"></span>'+d[1]+'</div>'+
- (i?'':'<div class="sb r" style="margin-top:8cqw">'+SB.map(function(x,k){return '<div style="--i:'+k+'">'+x+'</div>'}).join('')+'</div>')+
- '<div class="cards">'+d[2].map(function(c){var f=c.split('|');return '<div class="card r"><span class="star">★</span><h3>'+f[0]+'</h3>'+[1,2,3].map(function(k){return '<p><b>'+L[k-1]+'</b> '+f[k]+'</p>'}).join('')+'</div>'}).join('')+'</div>'+
- '<div class="ex r">💡 '+d[3]+'</div><div class="dg r">'+arc(d[4])+'</div><div class="pr r">🎯 تمرين: '+d[5]+'</div></section>'});
-document.getElementById('nv').innerHTML=nv;document.getElementById('days').innerHTML=h;document.getElementById('hr').innerHTML=arc(['ركّب|التنصيب|والـ Inboxes','نظّم|الأدوار|والشركات','أتمت|API و n8n|والـ AI']);
-var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1});
-document.querySelectorAll('.r').forEach(function(n){io.observe(n)});
-var links=document.querySelectorAll('nav a'),bar=document.querySelector('nav');
-var so=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){var i=+x.target.id.slice(1);links.forEach(function(l,k){l.classList.toggle('on',k===i)})}})},{rootMargin:'-40% 0px -50% 0px'});
-document.querySelectorAll('main section').forEach(function(s){so.observe(s)});
-addEventListener('scroll',function(){var m=document.documentElement,p=m.scrollTop/(m.scrollHeight-m.clientHeight);bar.style.setProperty('--p',Math.min(1,Math.max(0,p)))},{passive:true});
+(function(){
+'use strict';
+const CHECK_KEY='chatwoot-course-checks-v3', PASS_KEY='chatwoot-course-passes-v3';
+const search=document.getElementById('search'), pct=document.getElementById('pct'), bar=document.getElementById('bar'), reset=document.getElementById('reset');
+const boxes=Array.from(document.querySelectorAll('[data-progress]'));
+const days=Array.from(document.querySelectorAll('.day[data-day]')).sort((a,b)=>Number(a.dataset.day)-Number(b.dataset.day));
+const storyNodes=document.getElementById('storyNodes');
+
+const quizData={
+1:[
+ ['مين بيمثل سجل العميل الأساسي؟',['Conversation','Contact','Label','Team'],1],
+ ['لو عايز تكتب ملاحظة للفريق من غير ما العميل يشوفها؟',['Reply','Private Note','Snooze','Campaign'],1]
+],
+2:[
+ ['الـ Inbox في Chatwoot بيمثل إيه؟',['قناة/نقطة دخول للتواصل','موظف','تقرير','قاعدة بيانات'],0],
+ ['لو عندك WhatsApp للمبيعات وWhatsApp للدعم، الأفضل؟',['Inbox واحد لكل شيء','فصل القنوات والاستخدامات حسب التشغيل','حذف الـ Teams','استخدام Contact واحد'],1]
+],
+3:[
+ ['إيه الفرق الأساسي بين Agent وTeam؟',['الاتنين نفس الحاجة','Agent موظف، Team مجموعة موظفين','Team عميل','Agent هو Inbox'],1],
+ ['Label مفيد لما يكون ليه استخدام تشغيلي في Filter أو Routing أو Report؟',['صح','غلط'],0]
+],
+4:[
+ ['Automation Rule بنفكر فيها غالبًا كإيه؟',['Event + Conditions + Actions','Logo + Color + Font','Contact + Password','Report + Export'],0],
+ ['عميل قال "بكام المشروع؟". أنسب خطوة أولية في Routing؟',['تحديد الحالة والتصنيف ثم توجيهها للمسار المناسب','Resolve فورًا','حذف الرسالة','تغيير كلمة السر'],0]
+],
+5:[
+ ['الـ Webhook وظيفته الأساسية هنا إيه؟',['يبعت Event لنظام خارجي','يغير لون Chatwoot','يعمل Backup فقط','ينشئ حساب Gmail'],0],
+ ['لو n8n استقبل message_created، أول حاجة تعملها؟',['تفهم الـ payload وتحدد الـ context والمسار','تحذف الـ event','تغير DNS','تغلق كل المحادثات'],0]
+],
+6:[
+ ['إيه الهدف من Handoff؟',['تسليم الحالة للإنسان لما AI ما يكملش بأمان أو ثقة','منع الموظفين','حذف المحادثة','إيقاف Webhook'],0],
+ ['لو كل Conversation محتاجة ذاكرة منفصلة، Session ID مناسب يكون مرتبط بإيه؟',['conversation.id','لون الـ Inbox','اسم الـ CSS','رقم الـ Port'],0]
+],
+7:[
+ ['في Multi-Tenant System، إيه أهم مبدأ؟',['فصل بيانات وإعدادات كل شركة','استخدام نفس بيانات كل الشركات','وضع API keys في الواجهة','إعطاء الجميع Admin'],0],
+ ['قبل Production، إيه مجموعة منطقية؟',['HTTPS + Secrets + Backup + Monitoring + Staging','تغيير اللون فقط','حذف Logs','وضع Tokens داخل HTML'],0]
+]
+};
+
+function parse(key,fallback){try{const v=localStorage.getItem(key);return v?JSON.parse(v):fallback}catch(e){return fallback}}
+let checks=parse(CHECK_KEY,{}), passes=parse(PASS_KEY,{});
+const passed=n=>passes[String(n)]===true || passes[n]===true;
+function save(){try{localStorage.setItem(CHECK_KEY,JSON.stringify(checks));localStorage.setItem(PASS_KEY,JSON.stringify(passes))}catch(e){}}
+function progress(){
+ const done=[1,2,3,4,5,6,7].filter(passed).length;
+ if(pct)pct.textContent=done+'/7';
+ if(bar)bar.style.width=Math.round(done/7*100)+'%';
+}
+boxes.forEach((b,i)=>{b.checked=!!checks[i];b.addEventListener('change',()=>{checks[i]=b.checked;save()})});
+
+function createGate(day,n){
+ if(!quizData[n] || day.querySelector('.lesson-gate'))return;
+ const gate=document.createElement('div');gate.className='lesson-gate';
+ gate.innerHTML='<h3>🎯 اختبار فتح الدرس</h3><div class="gate-note">جاوب السؤالين صح. لو غلطت، راجع النقطة المرتبطة بالسؤال وجرب تاني.</div>'+
+ quizData[n].map((q,i)=>'<div class="gate-question" data-q="'+i+'"><p>'+(i+1)+') '+q[0]+'</p><div class="gate-options">'+q[1].map((o,j)=>'<button type="button" data-a="'+j+'">'+o+'</button>').join('')+'</div></div>').join('')+
+ '<div class="gate-result" aria-live="polite">ابدأ بالاختبار، والدرس اللي بعده هيفتح بعد النجاح.</div><button class="next-lesson" type="button">الدرس التالي →</button>';
+ const qs=Array.from(gate.querySelectorAll('.gate-question')),result=gate.querySelector('.gate-result'),next=gate.querySelector('.next-lesson');
+ const solved={};let score=0;
+ qs.forEach((qEl,qi)=>qEl.querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>{
+   const ok=Number(btn.dataset.a)===quizData[n][qi][2];
+   qEl.querySelectorAll('button').forEach(x=>x.classList.remove('good','bad'));
+   btn.classList.add(ok?'good':'bad');
+   if(ok && solved[qi]!==true){solved[qi]=true;score++}
+   if(!ok){solved[qi]=false;result.textContent='❌ مش ده. راجع الجزء المرتبط بالسؤال وجرب تاني.'}
+   else result.textContent=score===qs.length?'🎉 ممتاز. فتحت الدرس اللي بعده.':'✅ صح. كمّل السؤال اللي بعده.';
+   if(score===qs.length){
+     passes[n]=true;save();gate.classList.add('passed');unlockNext(n);progress();renderStory();next.focus();
+   }
+ })));
+ next.addEventListener('click',()=>{const t=document.getElementById(n<7?'day'+(n+1):'graduation');if(t)t.scrollIntoView({behavior:'smooth',block:'start'})});
+ day.appendChild(gate);
+}
+function lock(day){
+ day.classList.add('locked');if(day.querySelector('.lesson-lock'))return;
+ const n=Number(day.dataset.day),names=['الأول','الثاني','الثالث','الرابع','الخامس','السادس','السابع'];
+ const el=document.createElement('div');el.className='lesson-lock';
+ el.innerHTML='<div class="lock-card"><div class="lock-icon">🔒</div><h3>الدرس '+names[n-1]+' لسه مقفول</h3><p>خلص الدرس اللي قبله وعدّي اختبار الفهم. كل جزء هنا مبني على اللي قبله، عشان في الآخر تعرف تبني الـ System بنفسك.</p><button class="lock-btn" type="button">ارجع للدرس السابق</button></div>';
+ el.querySelector('button').addEventListener('click',()=>{const p=document.getElementById('day'+(n-1));if(p)p.scrollIntoView({behavior:'smooth',block:'start'})});
+ day.appendChild(el);
+}
+function unlock(day){if(!day)return;day.classList.remove('locked');const l=day.querySelector('.lesson-lock');if(l)l.remove()}
+function unlockNext(n){
+ const t=document.getElementById(n<7?'day'+(n+1):'graduation');unlock(t);
+ if(t)t.animate([{transform:'scale(.985)',opacity:.7},{transform:'scale(1)',opacity:1}],{duration:550,easing:'cubic-bezier(.2,.9,.3,1.25)'});
+}
+function renderStory(){
+ if(!storyNodes)return;
+ const labels=['الأساس','Inboxes','Teams','Automation','API','AI','Production'];
+ const sub=['افهم Chatwoot','ركّب القنوات','نظّم الأدوار','أتمت الشغل','اربط الأنظمة','دخل AI','شغّل بأمان'];
+ const pos=[[10,72],[23,39],[38,28],[53,38],[67,30],[81,43],[91,72]];
+ storyNodes.innerHTML='';
+ labels.forEach((label,i)=>{
+   const el=document.createElement('div');
+   el.className='story-node '+(passed(i+1)?'done ':'')+((i===0&&!passed(1))||(i>0&&passed(i)&&!passed(i+1))?'current':'');
+   el.style.left=pos[i][0]+'%';el.style.top=pos[i][1]+'%';
+   el.innerHTML='<div class="dot"><span class="num">'+String(i+1).padStart(2,'0')+'</span></div><span class="label">'+label+'</span><span class="small">'+sub[i]+'</span>';
+   storyNodes.appendChild(el);
+ });
+}
+function render(){
+ days.forEach(day=>{const n=Number(day.dataset.day);createGate(day,n);if(n===1||passed(n-1))unlock(day);else lock(day)});
+ const grad=document.getElementById('graduation');if(grad){if(passed(7))unlock(grad);else lock(grad)}
+ renderStory();progress();
+}
+if(reset)reset.addEventListener('click',()=>{checks={};passes={};try{localStorage.removeItem(CHECK_KEY);localStorage.removeItem(PASS_KEY)}catch(e){}boxes.forEach(b=>b.checked=false);render();window.scrollTo({top:0,behavior:'smooth'})});
+if(search)search.addEventListener('input',()=>{const q=search.value.trim().toLowerCase();days.concat(document.getElementById('graduation')).filter(Boolean).forEach(d=>d.classList.toggle('hidden',!!q&&!((d.innerText+' '+(d.dataset.search||'')).toLowerCase().includes(q))))});
+render();
+})();
 </script>
 </body>
 </html>
